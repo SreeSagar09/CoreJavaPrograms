@@ -60,6 +60,12 @@ public class Employee {
 	public void setDept(String dept) {
 		this.dept = dept;
 	}
+	
+	@Override
+	public String toString() {
+		return "Employee [empId=" + empId + ", ename=" + ename + ", age=" + age + ", sal=" + sal + ", dept=" + dept
+				+ "]";
+	}
 
 	public static void main(String[] args) {
 		
