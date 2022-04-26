@@ -1,5 +1,6 @@
 package com.demo;
 
+// Employee Bean Class
 public class Employee {
 	private String empId;
 	private String ename;
