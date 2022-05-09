@@ -26,8 +26,9 @@ public class CollectAndCollectorsExamples {
 		List<Employee> deptList = empList.stream().filter(e->e.getDept().equalsIgnoreCase("Tester")).collect(Collectors.toList());
 		deptList.forEach(e->{System.out.println(e.getEname()+"->"+e.getDept());});
 		
+		//To Age wise List
+		List<Employee> ageList = empList.stream().filter(e->e.getAge()>=25).collect(Collectors.toList());
+		ageList.forEach(e->{System.out.println(e.getEname()+"=>"+e.getAge());});
 		
-
 	}
-
 }
