@@ -1,12 +1,12 @@
 1. The basic Random class methods and their usages.
 Program: RandomClassProgram1.java
 Notes:
-1. The Random class nextBoolean() method returns the next pseudorandom, uniformly distributed boolean value from this random number generator's sequence.
-2. The Random class nextInt() method returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence. The general contract of nextInt is that one int value is pseudorandomly generated and returned. All 232 possible int values are produced with (approximately) equal probability.
-3. The Random class nextLong() method Returns the next pseudorandom, uniformly distributed long value from this random number generator's sequence. The general contract of nextLong is that one long value is pseudorandomly generated and returned.
-4. The Random class nextFloat() method returns the next pseudorandom, uniformly distributed float value between 0.0 and 1.0 from this random number generator's sequence.
-5. The Random class nectDouble() method returns the next pseudorandom, uniformly distributed double value between 0.0 and 1.0 from this random number generator's sequence.
-6. The Random class nextGaussian() method returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and standard deviation 1.0 from this random number generator's sequence.
+* The Random class nextBoolean() method returns the next pseudorandom, uniformly distributed boolean value from this random number generator's sequence.
+* The Random class nextInt() method returns the next pseudorandom, uniformly distributed int value from this random number generator's sequence. The general contract of nextInt is that one int value is pseudorandomly generated and returned. All 232 possible int values are produced with (approximately) equal probability.
+* The Random class nextLong() method Returns the next pseudorandom, uniformly distributed long value from this random number generator's sequence. The general contract of nextLong is that one long value is pseudorandomly generated and returned.
+* The Random class nextFloat() method returns the next pseudorandom, uniformly distributed float value between 0.0 and 1.0 from this random number generator's sequence.
+* The Random class nectDouble() method returns the next pseudorandom, uniformly distributed double value between 0.0 and 1.0 from this random number generator's sequence.
+* The Random class nextGaussian() method returns the next pseudorandom, Gaussian ("normally") distributed double value with mean 0.0 and standard deviation 1.0 from this random number generator's sequence.
 Output:
 Random Boolean: true
 Random Int: 952019006
@@ -18,7 +18,7 @@ Random Gaussian: 2.2198847763808236
 2. A program to generate 10 random integer numbers.
 Program:RandomClassProgram2.java
 Notes:
-1. The Random class nextInt() method will generates uniformly distributed int value from this random number generator's sequence. The general contract of nextInt is that one int value is pseudorandomly generated and returned. All 232 possible int values are produced with (approximately) equal probability.
+* The Random class nextInt() method will generates uniformly distributed int value from this random number generator's sequence. The general contract of nextInt is that one int value is pseudorandomly generated and returned. All 232 possible int values are produced with (approximately) equal probability.
 Output:
 394321724
 2070522280
@@ -34,7 +34,7 @@ Output:
 3. A program to generate 10 random positive integer numbers.
 Program: RandomClassProgram3.java
 Notes:
-1. The Math class abs(int) always Returns the absolute value of an int value. If the argument is not negative, the argument is returned. If the argument is negative, the negation of the argument is returned.
+* The Math class abs(int) always Returns the absolute value of an int value. If the argument is not negative, the argument is returned. If the argument is negative, the negation of the argument is returned.
 Output:
 339776786
 1476088842
@@ -50,8 +50,8 @@ Output:
 4. A program to generate two digit random number.
 Program: RandomClassProgram4.java
 Notes:-
-1. The Random class nextInt(int) method will generate uniformly distributed int value between zero (inclusive) and the specified value (exclusive).
-2. But in this program we required two digits random number then we passing 89 to nextInt method it will give random number 0 to 89, but we required two digits that’s why we adding 10 to the random number.
+* The Random class nextInt(int) method will generate uniformly distributed int value between zero (inclusive) and the specified value (exclusive).
+* But in this program we required two digits random number then we passing 89 to nextInt method it will give random number 0 to 89, but we required two digits thatâ€™s why we adding 10 to the random number.
 Output:
 Two Digit Random Number:
 41
