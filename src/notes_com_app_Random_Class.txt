@@ -15,6 +15,7 @@ Random Float: 0.4237203
 Random Double: 0.6394702934917592
 Random Gaussian: 2.2198847763808236
 --------------------------------------------------------------
+
 2. A program to generate 10 random integer numbers.
 Program:RandomClassProgram2.java
 Notes:
@@ -31,6 +32,7 @@ Output:
 -501631779
 -78017454
 -----------------------------------------------------------------
+
 3. A program to generate 10 random positive integer numbers.
 Program: RandomClassProgram3.java
 Notes:
@@ -47,6 +49,7 @@ Output:
 782101324
 2022054005
 ---------------------------------------------------------------------
+
 4. A program to generate two digit random number.
 Program: RandomClassProgram4.java
 Notes:-
@@ -56,18 +59,21 @@ Output:
 Two Digit Random Number:
 41
 ----------------------------------------------------------------------
+
 5. A program to pick value from the array.
 Program: RandomClassProgram5.java
 Output:
 Random Value from Array:
 S
 ----------------------------------------------------------------------
+
 6. A program to generate three digit random number.
 Program: RandomClassProgram6.java
 Output:
 Random three digit number:
 173
 ---------------------------------------------------------------------
+
 7. A program to generate six digit random number for OTP.
 Program: RandomClassProgram7.java
 Output:
