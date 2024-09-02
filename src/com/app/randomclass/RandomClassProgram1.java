@@ -1,4 +1,4 @@
-package com.app.Random_Class;
+package com.app.randomclass;
 
 import java.util.Random;
 
