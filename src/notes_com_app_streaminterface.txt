@@ -1,0 +1,72 @@
+1. A Program get even and odd numbers from list by using Stream interface filter method
+Program: StreamInterfaceProgram1.java
+Notes:
+* The Stream interface filter method accept one argument, that is Predicate.
+* It will return another Stream of values matched with the given Predicate.
+* It is always return new Stream of values. 
+Output:
+Original Numbers List
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Even Numbers List
+0
+2
+4
+6
+8
+10
+12
+Odd Numbers List
+1
+3
+5
+7
+9
+11
+--------------------------------------------------------------------
+
+2. A Program If number is even then add 10 to the number and return list by using Stream interface map method
+Program: StreamInterfaceProgram2.java
+Notes:
+* Stream interface map method accept one argument, that is Function.
+* It will return another Stream of Function interface apply method return values.
+Output:
+Original Numbers List
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+Modified Numbers List
+10
+1
+12
+3
+14
+5
+16
+7
+18
+9
+20
+11
+22
