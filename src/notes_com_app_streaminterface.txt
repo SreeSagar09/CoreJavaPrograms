@@ -32,3 +32,54 @@ Original Numbers List
 1,10,12,3,4,3,9,5,6,7,5,6,9,7,10
 Distinct Numbers List
 1,10,12,3,4,9,5,6,7
+------------------------------------------------------------------------
+
+4. A Program to sort the Product list by using Stream interface sorted method:
+Program: StreamInterfaceProgram4.java
+Notes:
+* The sorted() method sort the stream of elements according to the natural order.
+* When using sorted() method, if the elements of this stream are not Comparable, a java.lang.ClassCastException may be thrown when the terminal operation is executed.
+* The sorted(Comparator<? super T> comparator) method sort the stream of elements according to the given comparator. 
+Output:
+Original Product List
+Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
+Product [productId=3, productCode=P003, producName=Bags, quantity=24, price=250.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.0]
+Product [productId=6, productCode=P006, producName=Bats, quantity=10, price=560.0]
+Natural Order Product List
+Product [productId=3, productCode=P003, producName=Bags, quantity=24, price=250.0]
+Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.0]
+Product [productId=6, productCode=P006, producName=Bats, quantity=10, price=560.0]
+Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+Price Ascending Order Product List
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
+Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.0]
+Product [productId=3, productCode=P003, producName=Bags, quantity=24, price=250.0]
+Product [productId=6, productCode=P006, producName=Bats, quantity=10, price=560.0]
+Price Descending Order Product List
+Product [productId=6, productCode=P006, producName=Bats, quantity=10, price=560.0]
+Product [productId=3, productCode=P003, producName=Bags, quantity=24, price=250.0]
+Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.0]
+Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+ProductCode Ascending Order Product List
+Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+Product [productId=3, productCode=P003, producName=Bags, quantity=24, price=250.0]
+Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+Product [productId=6, productCode=P006, producName=Bats, quantity=10, price=560.0]
+ProductCode Descending Order Product List
+Product [productId=6, productCode=P006, producName=Bats, quantity=10, price=560.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.0]
+Product [productId=3, productCode=P003, producName=Bags, quantity=24, price=250.0]
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
