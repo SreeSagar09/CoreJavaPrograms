@@ -83,3 +83,53 @@ Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.
 Product [productId=3, productCode=P003, producName=Bags, quantity=24, price=250.0]
 Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
 Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
+---------------------------------------------------------------------------------
+
+5. A Program to demonstrate the use of Stream interface anyMatch, allMatch and noneMatch methods:
+Program: StreamInterfaceProgram5.java
+Notes:
+* anyMatch method is used to check any element is matching with the given predicate or not.
+* If any element is matches return true, else return false and if the stream is empty return false.
+* allMatch method is used to check all elements are matching with the given predicate or not.
+* If all elements are matches return true, else return false and stream is empty return true.
+* noneMatch method is used to check no one element is matching with the given predicate or not.
+* if no one element is matches return true, else return false and stream is empty return true.
+Output:
+List of Numbers
+3,7,5,9,2,3,5,11,7,-1
+Is List contain 5 factor numbers
+true
+Is List contain all Odd numbers
+false
+Is List contain negative numbers
+true
+--------------------------------------------------------------------------------------
+
+6. A Program to demonstrate the use of Stream interface findFirst method:
+Program: StreamInterfaceProgram6.java
+Note:
+* The findFirst method return Optional class Object, it return first element in the stream, if stream is empty then empty Optional class object will return.
+Output:
+calling findFirst method directly
+1
+calling findFirst method after filtering condition
+6
+calling findFirst method after filtering condition
+No value
+calling findFirst method on empty stream
+No value
+--------------------------------------------------------------------------------------
+
+7. A Program to demonstrate the use of Stream interface findAny method;
+Program: StreamInterfaceProgram7.java
+Note:
+* findAny method method return Optional class Object, it return any element in the stream, if stream is empty then empty Optional class object will return.
+Output:
+calling findAny method directly
+1
+calling findAny method after filtering condition
+6
+calling findAny method after filtering condition
+No value
+calling findAny method on empty stream
+No value
