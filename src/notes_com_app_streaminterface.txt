@@ -120,7 +120,7 @@ calling findFirst method on empty stream
 No value
 --------------------------------------------------------------------------------------
 
-7. A Program to demonstrate the use of Stream interface findAny method;
+7. A Program to demonstrate the use of Stream interface findAny method:
 Program: StreamInterfaceProgram7.java
 Note:
 * findAny method method return Optional class Object, it return any element in the stream, if stream is empty then empty Optional class object will return.
@@ -133,3 +133,30 @@ calling findAny method after filtering condition
 No value
 calling findAny method on empty stream
 No value
+------------------------------------------------------------------------------------
+
+8. A program to demonstrate the use of Stream interface map method:
+Program: StreamInterfaceProgram8.java
+Note:
+* The map method is accept Function interface as argument and return Function interface function method return type Stream object.
+Output:
+------- List of Employee Names --------
+[Akash, Mukesh, Vignesh, Ramesh, Avinash]
+---------- List of Employee Ids --------
+[E01, E02, E05, E03, E04]
+-----------------------------------------------------------------------------------
+
+9. A program to demonstrate the use of Stream interface filter method:
+Program: StreamInterfaceProgram9.java
+Note:
+* The filter method accept Predicate as argument and return filtered Stream object.
+Output:
+---- Age wise filtered List -----
+Mukesh -- 29
+Vignesh -- 28
+Avinash -- 31
+---- Salary wise filtered List-----
+Mukesh -- 35000.0
+Vignesh -- 30000.0
+Avinash -- 55000.0
+------------------------------------------------------------------------------------
