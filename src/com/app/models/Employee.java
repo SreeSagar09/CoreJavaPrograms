@@ -2,8 +2,9 @@ package com.app.models;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 	private String eid;
 	private String ename;
 	private Integer age;
@@ -52,8 +53,31 @@ public class Employee {
 	}
 	
 	@Override
+	public int hashCode() {
+		return Objects.hash(eid);
+	}
+	
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		
+		Employee other = (Employee) obj;
+		return Objects.equals(eid, other.eid);
+	}
+	
+	@Override
 	public String toString() {
 		return "Employee [eid=" + eid + ", ename=" + ename + ", age=" + age + ", esal=" + esal + "]";
+	}
+	
+	@Override
+	public int compareTo(Employee o) {
+		return this.ename.compareToIgnoreCase(o.ename);
 	}
 
 	public static List<Employee> getEmployeesList(){
