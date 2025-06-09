@@ -9,9 +9,9 @@ public class ComparatorInterfaceProgram5 {
 	public static void main(String[] args) {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		
-		Comparator<Employee> ageLengthComparator = Comparator.comparingLong(e->e.getAge());
+		Comparator<Employee> ageComparator = Comparator.comparingLong(e->e.getAge());
 	
-		employeeList.sort(ageLengthComparator);
+		employeeList.sort(ageComparator);
 		System.out.println("----- Sorting age by ascending order -----");
 		employeeList.forEach(e->{
 			System.out.println(e);

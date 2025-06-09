@@ -11,9 +11,9 @@ public class ComparatorInterfaceProgram13 {
 		employeeList.add(new Employee("E06", "Mukesh", 28, 35000.0));
 		employeeList.add(new Employee("E07", "Ramesh", 22, 19000.0));
 		
-		Comparator<Employee> enameAscendingComparator = (o1, o2) ->o1.getEname().compareToIgnoreCase(o2.getEname());
+		Comparator<Employee> enameAscComparator = (o1, o2) ->o1.getEname().compareToIgnoreCase(o2.getEname());
 	
-		Comparator<Employee> thenAgeAscComparator = enameAscendingComparator
+		Comparator<Employee> thenAgeAscComparator = enameAscComparator
 				.thenComparingInt(e->e.getAge());
 		
 		employeeList.sort(thenAgeAscComparator);

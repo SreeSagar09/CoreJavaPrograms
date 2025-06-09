@@ -5,17 +5,14 @@ import java.util.List;
 
 import com.app.models.Employee;
 
-public class ComparatorInterfaceProgram9 {
+public class ComparatorInterfaceProgram18 {
 	public static void main(String[] args) {
 		List<Employee> employeeList = Employee.getEmployeesList();
-		employeeList.add(3, null);
 		
-		Comparator<Employee> enameAscComparator = Comparator
-				.nullsLast((o1, o2)->o1.getEname().compareToIgnoreCase(o2.getEname()));
+		Comparator<Employee> enameAscComparator = (e1, e2)->e1.getEname().compareToIgnoreCase(e2.getEname());
 		
-		Comparator<Employee> enameDescComparator = Comparator
-				.nullsLast((o1, o2)->o2.getEname().compareToIgnoreCase(o1.getEname()));
-	
+		Comparator<Employee> enameDescComparator = enameAscComparator.reversed();
+		
 		employeeList.sort(enameAscComparator);
 		System.out.println("----- Sorting ename by ascending order -----");
 		employeeList.forEach(e->{

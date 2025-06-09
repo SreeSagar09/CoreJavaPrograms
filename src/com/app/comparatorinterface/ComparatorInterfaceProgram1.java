@@ -10,7 +10,7 @@ public class ComparatorInterfaceProgram1 {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		
 		// Implementing comparator by anonymous inner class
-		Comparator<Employee> eNameComparator = new Comparator<Employee>() {
+		Comparator<Employee> enameComparator = new Comparator<Employee>() {
 			@Override
 			public int compare(Employee o1, Employee o2) {
 				return o1.getEname().compareToIgnoreCase(o2.getEname());
@@ -22,7 +22,7 @@ public class ComparatorInterfaceProgram1 {
 			return o1.getAge().compareTo(o2.getAge());
 		};
 		
-		employeeList.sort(eNameComparator);
+		employeeList.sort(enameComparator);
 		System.out.println("--------- Sorting by ename ---------");
 		employeeList.forEach(e->{
 			System.out.println(e);

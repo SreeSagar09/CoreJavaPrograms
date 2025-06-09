@@ -5,7 +5,7 @@ import java.util.List;
 
 import com.app.models.Employee;
 
-public class ComparatorInterfaceProgram15 {
+public class ComparatorInterfaceProgram17 {
 	public static void main(String[] args) {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		employeeList.add(new Employee("E06", "Avinash", 30, 54000.0));
@@ -13,20 +13,24 @@ public class ComparatorInterfaceProgram15 {
 		
 		Comparator<Employee> enameAscComparator = (e1, e2)->e1.getEname().compareToIgnoreCase(e2.getEname());
 		
-		Comparator<Employee> thenAgeAscComparator = enameAscComparator
-				.thenComparing(e->e.getAge());
+		Comparator<Employee> ageAscComparator = (e1, e2)->e1.getAge().compareTo(e2.getAge());
 		
-		Comparator<Employee> thenEsalAscComparator = enameAscComparator
-				.thenComparing(e->e.getEsal());
+		Comparator<Employee> ageDescComparator = (e1, e2)->e2.getAge().compareTo(e1.getAge());
 		
-		employeeList.sort(thenAgeAscComparator);
+		Comparator<Employee> enameAscAndThenAgeAscComparator = enameAscComparator
+				.thenComparing(ageAscComparator);
+		
+		Comparator<Employee> enameAscAndThenAgeDescComparator = enameAscComparator
+				.thenComparing(ageDescComparator);
+		
+		employeeList.sort(enameAscAndThenAgeAscComparator);
 		System.out.println("--- Sorting ename by ascending order and then sorting age by ascending order ---");
 		employeeList.forEach(e->{
 			System.out.println(e);
 		});
 		
-		employeeList.sort(thenEsalAscComparator);
-		System.out.println("--- Sorting ename by ascending order and then sorting esal by ascending order ---");
+		employeeList.sort(enameAscAndThenAgeDescComparator);
+		System.out.println("--- Sorting ename by ascending order and then sorting age by descending order ---");
 		employeeList.forEach(e->{
 			System.out.println(e);
 		});

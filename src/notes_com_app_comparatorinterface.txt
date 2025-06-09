@@ -262,7 +262,7 @@ Employee [eid=E07, ename=Ramesh, age=22, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-15. A Program to show how to use thenComparingLong method:
+15. A Program to show how to use thenComparing method:
 Program: ComparatorInterfaceProgram15.java
 Notes:
 * Method signature:
@@ -284,3 +284,133 @@ Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
 Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+--------------------------------------------------------------------
+
+16. A Program to show how to use thenComparing method[2-Arguments]:
+Program: ComparatorInterfaceProgram16.java
+Notes:
+* Method signature:
+default <U> Comparator<T> thenComparing(Function<? super T, ? extends U> keyExtractor, Comparator<? super U> keyComparator)
+Output:
+--- Sorting ename by ascending order and then sorting age by ascending order ---
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E06, ename=Avinash, age=30, esal=54000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+--- Sorting ename by ascending order and then sorting age by descending order ---
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E06, ename=Avinash, age=30, esal=54000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+--- Sorting ename by ascending order and then sorting esal by ascending order ---
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E06, ename=Avinash, age=30, esal=54000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+--- Sorting ename by ascending order and then sorting esal by descending order ---
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E06, ename=Avinash, age=30, esal=54000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+--------------------------------------------------------------------
+
+17. A Program to show how to use thenComparing method:
+Program: ComparatorInterfaceProgram17.java
+Notes:
+* Method signature:
+default Comparator<T> thenComparing(Comparator<? super T> other)
+Output:
+--- Sorting ename by ascending order and then sorting age by ascending order ---
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E06, ename=Avinash, age=30, esal=54000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+--- Sorting ename by ascending order and then sorting age by descending order ---
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E06, ename=Avinash, age=30, esal=54000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+--------------------------------------------------------------------
+
+18. A Program to show how to use reversed method:
+Program: ComparatorInterfaceProgram18.java
+Notes:
+* Method signature:
+default Comparator<T> reversed()
+Output:
+----- Sorting ename by ascending order -----
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+----- Sorting ename by descending order -----
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+--------------------------------------------------------------------
+
+19. A Program to sort the values and if the value is null it should comes first in order:
+Program: ComparatorInterfaceProgram19.java
+Notes:
+
+Output:
+----- Sorting age by ascending order and value elements will come first -----
+Employee [eid=E06, ename=Akhil, age=null, esal=50000.0]
+Employee [eid=E07, ename=Raghu, age=null, esal=40000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+----- Sorting age by ascending order and value elements will come first -----
+Employee [eid=E06, ename=Akhil, age=null, esal=50000.0]
+Employee [eid=E07, ename=Raghu, age=null, esal=40000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+--------------------------------------------------------------------
+
+20. A Program to sort the values and if the value is null it should comes last in order:
+Program: ComparatorInterfaceProgram20.java
+Notes:
+
+Output:
+----- Sorting age by ascending order and value elements will come last -----
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E06, ename=Akhil, age=null, esal=50000.0]
+Employee [eid=E07, ename=Raghu, age=null, esal=40000.0]
+----- Sorting age by ascending order and value elements will come last -----
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E06, ename=Akhil, age=null, esal=50000.0]
+Employee [eid=E07, ename=Raghu, age=null, esal=40000.0]

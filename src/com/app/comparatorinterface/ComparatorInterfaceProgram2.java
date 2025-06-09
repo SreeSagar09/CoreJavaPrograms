@@ -9,27 +9,27 @@ public class ComparatorInterfaceProgram2 {
 	public static void main(String[] args) {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		
-		Comparator<Employee> enameAcsendingComparator = new Comparator<Employee>() {
+		Comparator<Employee> enameAscComparator = new Comparator<Employee>() {
 			@Override
 			public int compare(Employee o1, Employee o2) {
 				return o1.getEname().compareToIgnoreCase(o2.getEname());
 			}
 		};
 		
-		Comparator<Employee> ageDescendingComparator = new Comparator<Employee>() {
+		Comparator<Employee> ageDescComparator = new Comparator<Employee>() {
 			@Override
 			public int compare(Employee o1, Employee o2) {
 				return o2.getAge().compareTo(o1.getAge());
 			}
 		};
 		
-		employeeList.sort(enameAcsendingComparator);
+		employeeList.sort(enameAscComparator);
 		System.out.println("------- Sorting ascending order by ename ------");
 		employeeList.forEach(e->{
 			System.out.println(e);
 		});
 		
-		employeeList.sort(ageDescendingComparator);
+		employeeList.sort(ageDescComparator);
 		System.out.println("------- Sorting descending order by age");
 		employeeList.forEach(e->{
 			System.out.println(e);

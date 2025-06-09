@@ -9,9 +9,9 @@ public class ComparatorInterfaceProgram3 {
 	public static void main(String[] args) {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		
-		Comparator<Employee> salComparator = Comparator.comparingDouble(e->e.getEsal());
+		Comparator<Employee> esalComparator = Comparator.comparingDouble(e->e.getEsal());
 		
-		employeeList.sort(salComparator);
+		employeeList.sort(esalComparator);
 		System.out.println("------ Sorting esal by ascending order -------");
 		employeeList.forEach(e->{
 			System.out.println(e);
