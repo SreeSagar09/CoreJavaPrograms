@@ -1,0 +1,127 @@
+1. A Program to show how to use of method:
+Program: StreamInterfaceProgram1.java
+Notes:
+* This method returns a sequential stream containing a single element.
+* If the given element is null then it throw java.lang.NullPointerException, means it will not accept null element.
+* Method signature:
+public static<T> Stream<T> of(T t)
+Output:
+------ Stream elements ------
+15
+----------------------------------------------------------------------------------
+
+2. A Program to show how to use ofNullable method:
+Program: StreamInterfaceProgram2.java
+Notes:
+* This method returns a sequential stream containing a single element, if non-null, otherwise returns an empty stream
+* Method signature:
+public static<T> Stream<T> ofNullable(T t)
+Output:
+--- Stream of null element ---
+--- Stream of not null element ---
+10
+----------------------------------------------------------------------------------
+
+3. A Program to show how to use of method[var argument]:
+Program: StreamInterfaceProgram3.java
+Notes:
+* This method returns a sequential ordered stream whose elements are the specified values.
+* Method signature:
+public static<T> Stream<T> of(T... values)
+Output:
+--- Number stream elements ---
+0
+1
+2
+3
+4
+5
+--- String stream elements ---
+s
+a
+g
+a
+r
+----------------------------------------------------------------------------------
+
+4. A Program to show how to use filter method:
+Program: StreamInterfaceProgram4.java
+Notes:
+* Method signature:
+Stream<T> filter(Predicate<? super T> predicate)
+Output:
+--- Filter price lessthan or equals to 150.00 ---
+Product [productId=1, productCode=P001, producName=Books, quantity=12, price=25.0]
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+Product [productId=4, productCode=P004, producName=Balls, quantity=34, price=30.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+Product [productId=7, productCode=P007, producName=Box, quantity=45, price=150.0]
+--- Filter quantity greaterThan or equals to 50 ---
+Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5.0]
+Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
+----------------------------------------------------------------------------------
+
+5. A Program to show how to use map method:
+Program: StreamInterfaceProgram5.java
+Notes:
+* Method signature:
+<R> Stream<R> map(Function<? super T, ? extends R> mapper)
+Output:
+--- Get product code and name ---
+Books[P001]
+Pencils[P002]
+Bags[P003]
+Balls[P004]
+Pens[P005]
+Bats[P006]
+Box[P007]
+---- To multiply quantity and price of each product ----
+300.0
+270.0
+6000.0
+1020.0
+1800.0
+5600.0
+6750.0
+----------------------------------------------------------------------------------
+
+6. A Program to show how to use mapToInt, mapToLong and mapToDouble method:
+Program: StreamInterfaceProgram6.java
+Notes:
+* Method signature:
+IntStream mapToInt(ToIntFunction<? super T> mapper)
+LongStream mapToLong(ToLongFunction<? super T> mapper)
+DoubleStream mapToDouble(ToDoubleFunction<? super T> mapper)
+Output:
+--- Get quantity from product ---
+12
+54
+24
+34
+120
+10
+45
+--- Get quantity from product ---
+12
+54
+24
+34
+120
+10
+45
+--- Get price from product ---
+25.0
+5.0
+250.0
+30.0
+15.0
+560.0
+150.0
+----------------------------------------------------------------------------------
+
+7. A Program to show how to use flatMap method:
+Program: StreamInterfaceProgram7.java
+Notes:
+* Method signature:
+<R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)
+Output:

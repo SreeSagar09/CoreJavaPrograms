@@ -96,22 +96,20 @@ public class Product implements Comparable<Product> {
 	public static List<Product> getProductList(){
 		List<Product> productList = new ArrayList<>();
 		Product product1 = new Product(1, "P001", "Books", 12, 25.00);
-		productList.add(product1);
-		
-		Product product3 = new Product(3, "P003", "Bags", 24, 250.00);
-		productList.add(product3);
-		
-		Product product5 = new Product(5, "P005", "Pens", 120, 15.00);
-		productList.add(product5);
-		
 		Product product2 = new Product(2, "P002", "Pencils", 54, 5.00);
-		productList.add(product2);
-		
+		Product product3 = new Product(3, "P003", "Bags", 24, 250.00);
 		Product product4 = new Product(4, "P004", "Balls", 34, 30.00);
-		productList.add(product4);
-		
+		Product product5 = new Product(5, "P005", "Pens", 120, 15.00);
 		Product product6 = new Product(6, "P006", "Bats", 10, 560.00);
+		Product product7 = new Product(7, "P007", "Box", 45, 150.00);
+		
+		productList.add(product1);
+		productList.add(product2);
+		productList.add(product3);
+		productList.add(product4);
+		productList.add(product5);
 		productList.add(product6);
+		productList.add(product7);
 		
 		return productList;
 	}
