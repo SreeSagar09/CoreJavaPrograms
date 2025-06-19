@@ -1,0 +1,26 @@
+1. A Program to show how to use toCollection method:
+Program: CollectorsClassProgram1.java
+Notes:
+* Method signature:
+public static <T, C extends Collection<T>> Collector<T, ?, C> toCollection(Supplier<C> collectionFactory)
+Output:
+----- Collection to ArrayList -----
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+----- Collecton to LinkedList -----
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+----- Collection to HashSet -----
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+
+----------------------------------------------------------------------------------

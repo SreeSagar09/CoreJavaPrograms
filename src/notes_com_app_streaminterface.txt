@@ -125,3 +125,44 @@ Notes:
 * Method signature:
 <R> Stream<R> flatMap(Function<? super T, ? extends Stream<? extends R>> mapper)
 Output:
+----- All Students PhoneNumber List -----
+9876543210
+9876543201
+9876543021
+9876540321
+9876504321
+9876054321
+9870543201
+9806543021
+9870654321
+9876543200
+9876543001
+9876543010
+9876540201
+9876503021
+9876043210
+9870543201
+9806543021
+9876540021
+----------------------------------------------------------------------------------
+
+7. A Program to show how to use distinct method:
+Program: StreamInterfaceProgram7.java
+Notes:
+* Method signature:
+Stream<T> distinct();
+Output:
+---- Without distinct method ----
+2
+4
+5
+3
+5
+6
+2
+---- With distinct method ----
+2
+4
+5
+3
+6
