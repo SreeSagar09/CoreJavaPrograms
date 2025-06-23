@@ -7,7 +7,7 @@ import java.util.Objects;
 public class Product implements Comparable<Product> {
 	private Integer productId;
 	private String productCode;
-	private String producName;
+	private String productName;
 	private Integer quantity;
 	private Double price;
 	
@@ -15,11 +15,11 @@ public class Product implements Comparable<Product> {
 		super();
 	}
 
-	public Product(Integer productId, String productCode, String producName, Integer quantity, Double price) {
+	public Product(Integer productId, String productCode, String productName, Integer quantity, Double price) {
 		super();
 		this.productId = productId;
 		this.productCode = productCode;
-		this.producName = producName;
+		this.productName = productName;
 		this.quantity = quantity;
 		this.price = price;
 	}
@@ -40,12 +40,12 @@ public class Product implements Comparable<Product> {
 		this.productCode = productCode;
 	}
 
-	public String getProducName() {
-		return producName;
+	public String getProductName() {
+		return productName;
 	}
 
-	public void setProducName(String producName) {
-		this.producName = producName;
+	public void setProducName(String productName) {
+		this.productName = productName;
 	}
 
 	public Integer getQuantity() {
@@ -84,13 +84,13 @@ public class Product implements Comparable<Product> {
 
 	@Override
 	public String toString() {
-		return "Product [productId=" + productId + ", productCode=" + productCode + ", producName=" + producName
+		return "Product [productId=" + productId + ", productCode=" + productCode + ", productName=" + productName
 				+ ", quantity=" + quantity + ", price=" + price + "]";
 	}
 
 	@Override
 	public int compareTo(Product o) {
-		return this.producName.compareTo(o.producName);
+		return this.productName.compareTo(o.productName);
 	}
 	
 	public static List<Product> getProductList(){

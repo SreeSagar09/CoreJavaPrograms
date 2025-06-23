@@ -10,19 +10,22 @@ public class ComparatorInterfaceProgram8 {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		employeeList.add(3, null);
 		
-		Comparator<Employee> enameAscComparator = Comparator
-				.nullsFirst((o1, o2)->o1.getEname().compareToIgnoreCase(o2.getEname()));
+		Comparator<Employee> enameAscComparator = (e1, e2)->e1.getEname().compareToIgnoreCase(e2.getEname());
 		
-		Comparator<Employee> enameDescComparator = Comparator
-				.nullsFirst((o1, o2)->o2.getEname().compareToIgnoreCase(o1.getEname()));
+		Comparator<Employee> enameDescComparator = (e1, e2)->e2.getEname().compareToIgnoreCase(e1.getEname());
 		
-		employeeList.sort(enameAscComparator);
+		
+		Comparator<Employee> nullAscComparator = Comparator.nullsFirst(enameAscComparator);
+		
+		Comparator<Employee> nullDescComparator = Comparator.nullsFirst(enameDescComparator);
+		
+		employeeList.sort(nullAscComparator);
 		System.out.println("----- Sorting ename by ascending order ------");
 		employeeList.forEach(e->{
 			System.out.println(e);
 		});
 		
-		employeeList.sort(enameDescComparator);
+		employeeList.sort(nullDescComparator);
 		System.out.println("----- Sorting ename by descending order ------");
 		employeeList.forEach(e->{
 			System.out.println(e);

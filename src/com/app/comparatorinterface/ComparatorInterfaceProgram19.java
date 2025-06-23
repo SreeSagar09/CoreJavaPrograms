@@ -2,6 +2,7 @@ package com.app.comparatorinterface;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 import com.app.models.Employee;
 
@@ -21,8 +22,12 @@ public class ComparatorInterfaceProgram19 {
 			}
 		};
 		
+		Function<Employee, Integer> ageFunction = (employee)->employee.getAge();
+		
+		Comparator<Integer> integerAscComparator = (i1, i2)->i1.compareTo(i2);
+		
 		Comparator<Employee> nullValueElementFirstComparator1 = Comparator
-				.comparing(e->e.getAge(), Comparator.nullsFirst((a1, a2)->a1.compareTo(a2)));
+				.comparing(ageFunction, Comparator.nullsFirst(integerAscComparator));
 		
 		employeeList.sort(nullValueElementFirstComparator);
 		System.out.println("----- Sorting age by ascending order and value elements will come first -----");

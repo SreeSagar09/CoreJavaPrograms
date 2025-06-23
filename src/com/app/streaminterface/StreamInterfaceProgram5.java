@@ -12,7 +12,7 @@ public class StreamInterfaceProgram5 {
 		Function<Product, String> productCodeAndNameFuncton = new Function<Product, String>() {
 			@Override
 			public String apply(Product t) {
-				return t.getProducName()+"["+t.getProductCode()+"]";
+				return t.getProductName()+"["+t.getProductCode()+"]";
 			}
 		};
 		

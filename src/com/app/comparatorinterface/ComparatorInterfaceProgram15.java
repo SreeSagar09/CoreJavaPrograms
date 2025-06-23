@@ -2,6 +2,7 @@ package com.app.comparatorinterface;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 import com.app.models.Employee;
 
@@ -13,11 +14,17 @@ public class ComparatorInterfaceProgram15 {
 		
 		Comparator<Employee> enameAscComparator = (e1, e2)->e1.getEname().compareToIgnoreCase(e2.getEname());
 		
+		
+		Function<Employee, Integer> ageFunction = (employee)->employee.getAge();
+		
+		Function<Employee, Double> esalFunction = (employee)->employee.getEsal();
+		
+		
 		Comparator<Employee> thenAgeAscComparator = enameAscComparator
-				.thenComparing(e->e.getAge());
+				.thenComparing(ageFunction);
 		
 		Comparator<Employee> thenEsalAscComparator = enameAscComparator
-				.thenComparing(e->e.getEsal());
+				.thenComparing(esalFunction);
 		
 		employeeList.sort(thenAgeAscComparator);
 		System.out.println("--- Sorting ename by ascending order and then sorting age by ascending order ---");

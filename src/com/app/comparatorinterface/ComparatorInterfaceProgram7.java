@@ -2,6 +2,7 @@ package com.app.comparatorinterface;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.function.Function;
 
 import com.app.models.Employee;
 
@@ -9,17 +10,31 @@ public class ComparatorInterfaceProgram7 {
 	public static void main(String[] args) {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		
+		Function<Employee, String> enameFunction = (employee)->employee.getEname();
+		
+		Function<Employee, Double> esalFunction = (employee)->employee.getEsal();
+		
+		
+		Comparator<String> stringAscComparator = (s1, s2)->s1.compareToIgnoreCase(s2);
+		
+		Comparator<String> stringDescComparator = (s1, s2)->s2.compareToIgnoreCase(s1);
+		
+		Comparator<Double> doubleAscComparator = (d1, d2)->d1.compareTo(d2);
+		
+		Comparator<Double> doubleDescComparator = (d1, d2)->d2.compareTo(d1);
+		
+		
 		Comparator<Employee> enameAscComparator = Comparator
-				.comparing(e->e.getEname(), (o1, o2) ->o1.compareToIgnoreCase(o2));
+				.comparing(enameFunction, stringAscComparator);
 		
 		Comparator<Employee> enameDescComparator = Comparator
-				.comparing(e->e.getEname(), (o1, o2) ->o2.compareToIgnoreCase(o1));
+				.comparing(enameFunction, stringDescComparator);
 		
 		Comparator<Employee> esalAscComparator = Comparator
-				.comparing(e->e.getEsal(), (o1, o2) ->o1.compareTo(o2));
+				.comparing(esalFunction, doubleAscComparator);
 		
 		Comparator<Employee> esalDescComparator = Comparator
-				.comparing(e->e.getEsal(), (o1, o2) ->o2.compareTo(o1));
+				.comparing(esalFunction, doubleDescComparator);
 		
 		employeeList.sort(enameAscComparator);
 		System.out.println("----- Sorting ename by ascending order -----");

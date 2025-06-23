@@ -104,7 +104,7 @@ Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 --------------------------------------------------------------------
 
-7. A Program to show how to use comparing method[2-Arguments]:
+7. A Program to show how to use comparing method:
 Program: ComparatorInterfaceProgram7.java
 Notes:
 * Method signature:

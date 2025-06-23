@@ -22,5 +22,127 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
-
 ----------------------------------------------------------------------------------
+
+2. A Program to show how to use toCollection method:
+Program: CollectorsClassProgram2.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, List<T>> toList()
+Output:
+----- ProductName List -----
+Books
+Pencils
+Bags
+Balls
+Pens
+Bats
+Box
+----------------------------------------------------------------------------------
+
+3. A Program to show how to use toMap method:
+Program: CollectorsClassProgram3.java
+Notes:
+* Method signature:
+public static <T, K, U> Collector<T, ?, Map<K,U>> toMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper)
+Output:
+----- ProductCode and ProductName map -----
+P005 --> Pens
+P004 --> Balls
+P007 --> Box
+P006 --> Bats
+P001 --> Books
+P003 --> Bags
+P002 --> Pencils
+----- ProductName and Price map -----
+Bats --> 560.0
+Bags --> 250.0
+Box --> 150.0
+Balls --> 30.0
+Books --> 25.0
+Pencils --> 5.0
+Pens --> 15.0
+----------------------------------------------------------------------------------
+
+4. A Program to show how to use toMap method:
+Program: CollectorsClassProgram4.java
+Notes:
+* Method signature:
+public static <T, K, U> Collector<T, ?, Map<K,U>> toMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper, BinaryOperator<U> mergeFunction)
+Output:
+-------- All Products --------
+P001 - Books - 12 - 25.0
+P002 - Pencils - 54 - 5.0
+P003 - Bags - 24 - 250.0
+P004 - Balls - 34 - 30.0
+P005 - Pens - 120 - 15.0
+P006 - Bats - 10 - 560.0
+P007 - Box - 45 - 150.0
+P008 - Bags - 25 - 300.0
+P009 - Bats - 5 - 500.0
+--- ProductName and Quantity map[if productName is duplicate then first comes quantity as value.] ---
+Bats - 10
+Bags - 24
+Box - 45
+Balls - 34
+Books - 12
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity map[if productName is duplicate then last comes quantity as value.] ---
+Bats - 5
+Bags - 25
+Box - 45
+Balls - 34
+Books - 12
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity map[if productName is duplicate then minimum price as value.] ---
+Bats - 500.0
+Bags - 250.0
+Box - 150.0
+Balls - 30.0
+Books - 25.0
+Pencils - 5.0
+Pens - 15.0
+--- ProductName and Quantity map[if productName is duplicate then maximum price as value.] ---
+Bats - 560.0
+Bags - 300.0
+Box - 150.0
+Balls - 30.0
+Books - 25.0
+Pencils - 5.0
+Pens - 15.0
+----------------------------------------------------------------------------------
+
+5. A Program to show how to use toMap method:
+Program: CollectorsClassProgram5.java
+Notes:
+* Method signature:
+public static <T, K, U, M extends Map<K, U>> Collector<T, ?, M> toMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapFactory)
+Output:
+-------- All Products --------
+P001 - Books - 12 - 25.0
+P002 - Pencils - 54 - 5.0
+P003 - Bags - 24 - 250.0
+P004 - Balls - 34 - 30.0
+P005 - Pens - 120 - 15.0
+P006 - Bats - 10 - 560.0
+P007 - Box - 45 - 150.0
+P008 - Bags - 25 - 300.0
+P009 - Bats - 5 - 500.0
+--- ProductName and Quantity HashMap[if productName is duplicate then maxmum quantity as value.] ---
+Bats - 10
+Bags - 25
+Box - 45
+Balls - 34
+Books - 12
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity LinkedHashMap[if productName is duplicate then maxmum quantity as value.] ---
+Books - 12
+Pencils - 54
+Bags - 25
+Balls - 34
+Pens - 120
+Bats - 10
+Box - 45
