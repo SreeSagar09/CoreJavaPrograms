@@ -2,6 +2,7 @@ package com.app.streaminterface;
 
 import java.util.List;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 import com.app.models.Product;
 
@@ -18,13 +19,17 @@ public class StreamInterfaceProgram5 {
 		
 		Function<Product, Double> multiplyQuantityAndPriceFunction = (p)->p.getQuantity()*p.getPrice();
 		
+		Stream<String> productCodeAndNameStream = productList.stream().map(productCodeAndNameFuncton);
+		
 		System.out.println("--- Get product code and name ---");
-		productList.stream().map(productCodeAndNameFuncton).forEach(p->{
+		productCodeAndNameStream.forEach(p->{
 			System.out.println(p);
 		});
 		
+		Stream<Double> multiplyQtyPriceStream = productList.stream().map(multiplyQuantityAndPriceFunction);
+		
 		System.out.println("---- To multiply quantity and price of each product ----");
-		productList.stream().map(multiplyQuantityAndPriceFunction).forEach(p->{
+		multiplyQtyPriceStream.forEach(p->{
 			System.out.println(p);
 		});
 	}

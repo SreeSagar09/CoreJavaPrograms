@@ -1,6 +1,7 @@
 package com.app.streaminterface;
 
 import java.util.List;
+import java.util.stream.Stream;
 
 public class StreamInterfaceProgram8 {
 
@@ -13,7 +14,9 @@ public class StreamInterfaceProgram8 {
 		});
 		
 		System.out.println("---- With distinct method ----");
-		numberList.stream().distinct().forEach(n->{
+		
+		Stream<Integer> distinctNumberStream = numberList.stream().distinct();
+		distinctNumberStream.forEach(n->{
 			System.out.println(n);
 		});
 	}

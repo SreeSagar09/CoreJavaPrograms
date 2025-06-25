@@ -4,6 +4,9 @@ import java.util.List;
 import java.util.function.ToDoubleFunction;
 import java.util.function.ToIntFunction;
 import java.util.function.ToLongFunction;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
+import java.util.stream.LongStream;
 
 import com.app.models.Product;
 
@@ -17,18 +20,34 @@ public class StreamInterfaceProgram6 {
 		
 		ToDoubleFunction<Product> priceToDoubleFunction = (p)->p.getPrice();
 		
+		ToDoubleFunction<Product> multiplyQtyAndPriceStream = (p)->p.getQuantity()*p.getPrice();
+		
+		
+		IntStream qtyIntStream = productList.stream().mapToInt(quantityToIntFunction);
+		
 		System.out.println("--- Get quantity from product ---");
-		productList.stream().mapToInt(quantityToIntFunction).forEach(i->{
+		qtyIntStream.forEach(i->{
 			System.out.println(i);
 		});
 		
+		LongStream qtyLongStream = productList.stream().mapToLong(quantityToLongFunction);
+		
 		System.out.println("--- Get quantity from product ---");
-		productList.stream().mapToLong(quantityToLongFunction).forEach(l->{
+		qtyLongStream.forEach(l->{
 			System.out.println(l);
 		});
 		
+		DoubleStream priceDoubleStream = productList.stream().mapToDouble(priceToDoubleFunction);
+		
 		System.out.println("--- Get price from product ---");
-		productList.stream().mapToDouble(priceToDoubleFunction).forEach(d->{
+		priceDoubleStream.forEach(d->{
+			System.out.println(d);
+		});
+		
+		DoubleStream multiplyQtyAndPriceDoubleStream = productList.stream().mapToDouble(multiplyQtyAndPriceStream);
+		
+		System.out.println("--- Get multiply quantity and price of product ---");
+		multiplyQtyAndPriceDoubleStream.forEach(d->{
 			System.out.println(d);
 		});
 	}

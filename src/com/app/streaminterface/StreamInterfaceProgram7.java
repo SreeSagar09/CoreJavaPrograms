@@ -12,10 +12,10 @@ public class StreamInterfaceProgram7 {
 		
 		Function<Student, Stream<Long>> phoneNoStreamFun = (s)->s.getPhoneNumbers().stream();
 		
-		List<Long> phoneNumberList = studentList.stream().flatMap(phoneNoStreamFun).toList();
+		Stream<Long> phoneNumberStream = studentList.stream().flatMap(phoneNoStreamFun);
 		
 		System.out.println("----- All Students PhoneNumber List -----");
-		phoneNumberList.forEach(pn->{
+		phoneNumberStream.forEach(pn->{
 			System.out.println(pn);
 		});
 	}

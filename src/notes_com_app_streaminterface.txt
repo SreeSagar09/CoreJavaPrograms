@@ -117,6 +117,14 @@ Output:
 15.0
 560.0
 150.0
+--- Get multiply quantity and price of product ---
+300.0
+270.0
+6000.0
+1020.0
+1800.0
+5600.0
+6750.0
 ----------------------------------------------------------------------------------
 
 7. A Program to show how to use flatMap method:
@@ -146,11 +154,11 @@ Output:
 9876540021
 ----------------------------------------------------------------------------------
 
-7. A Program to show how to use distinct method:
-Program: StreamInterfaceProgram7.java
+8. A Program to show how to use distinct method:
+Program: StreamInterfaceProgram8.java
 Notes:
 * Method signature:
-Stream<T> distinct();
+Stream<T> distinct()
 Output:
 ---- Without distinct method ----
 2
@@ -166,3 +174,173 @@ Output:
 5
 3
 6
+----------------------------------------------------------------------------------
+
+9. A Program to show how to use sorted method:
+Program: StreamInterfaceProgram9.java
+Notes:
+* Method signature:
+Stream<T> sorted()
+* If the elements of this stream are not Comparable, a java.lang.ClassCastException may be thrown when the terminal operation is executed. 
+Output:
+----- Employee list -----
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+----- Employees are sorted by Employee object natural order -----
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+----------------------------------------------------------------------------------
+
+10. A Program to show how to use sorted method:
+Program: StreamInterfaceProgram10.java
+Notes:
+* Method signature:
+Stream<T> sorted(Comparator<? super T> comparator)
+Output:
+----- Student fullName sorted by ascending order -----
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+----- Student fullName sorted by descending order -----
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+----- Student age sorted by ascending order -----
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+----- Student age sorted by descending order -----
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+----------------------------------------------------------------------------------
+
+11. A Program to show how to use peek method:
+Program: StreamInterfaceProgram11.java
+Notes:
+* Method signature:
+Stream<T> peek(Consumer<? super T> action)
+Output:
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Mukesh
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Vignesh
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+Avinash
+----------------------------------------------------------------------------------
+
+12. A Program to show how to use limit method:
+Program: StreamInterfaceProgram12.java
+Notes:
+* Method signature:
+Stream<T> limit(long maxSize)
+* If maxSize is equals to zero then limit method return empty stream.
+* If maxSize is negative value then limit method throw java.lang.IllegalArgumentException.
+* If maxSize is greaterthan or equals to stream size then limit method return all elements of stream.
+* If maxSize is equals to long max value then limit method return all elements of stream.
+Output:
+----- Students are limited upto zero ------
+----- Students are limited upto two ------
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+----- Students are limited upto four ------
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+----- Students are limited upto Long max value ------
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+----------------------------------------------------------------------------------
+
+13. A Program to show how to use skip method:
+Program: StreamInterfaceProgram13.java
+Notes:
+* Method signature:
+Stream<T> skip(long n)
+* If n is equals to zero then skip method return all elements of stream.
+* If n is negative value then skip method throw java.lang.IllegalArgumentException.
+* if n is equals to Long max value then skip method return empty stream.
+Output:
+----- Students are skipped upto zero ------
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+----- Students are skipped upto three ------
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+----- Students are skipped upto Long max value ------
+----------------------------------------------------------------------------------
+
+14. A Program to show how to use takeWhile method:
+Program: StreamInterfaceProgram14.java
+Notes:
+* Method signature:
+default Stream<T> takeWhile(Predicate<? super T> predicate)
+* It will takes the elements from the stream until it matches the given predicate.
+Output:
+----- take while age lessthan or equals to 25 from unSorted List -----
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+----- take while age lessthan or equals to 25 from sorted List -----
+Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
+----------------------------------------------------------------------------------
+
+15. A Program to show how to use takeWhile method:
+Program: StreamInterfaceProgram15.java
+Notes:
+* Method signature:
+default Stream<T> dropWhile(Predicate<? super T> predicate)
+* It will drop the elements from the stream until it matches the given predicate.
+Output:
+----- drop while age lessthan or equals to 25 from unSorted List -----
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, age=22, courseFee=28500.0, phoneNumbers=[9876043210, 9870543201, 9806543021, 9876540021]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+----- drop while age lessthan or equals to 25 from sorted List -----
+Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
+Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
+Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
+Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
