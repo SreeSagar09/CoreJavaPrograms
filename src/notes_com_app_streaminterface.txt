@@ -344,3 +344,58 @@ Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Kar
 Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
 Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=29, courseFee=35000.0, phoneNumbers=[9876543200, 9876543001]]
 Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
+----------------------------------------------------------------------------------
+
+16. A Program to show how to use forEach, forEachOrdered method:
+Program: StreamInterfaceProgram16.java
+Notes:
+* Method signature:
+void forEach(Consumer<? super T> action)
+void forEachOrdered(Consumer<? super T> action)
+Output:
+------ Traversing stream by forEach method -------
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+------ Traversing stream by forEachOrder method -------
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+----------------------------------------------------------------------------------
+
+17. A Program to show how to use toArray method:
+Program: StreamInterfaceProgram17.java
+Notes:
+* Method signature:
+Object[] toArray()
+Output:
+------ Traversing object array ------
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+----------------------------------------------------------------------------------
+
+18. A Program to show how to use forEach,  method:
+Program: StreamInterfaceProgram18.java
+Notes:
+* Method signature:
+<A> A[] toArray(IntFunction<A[]> generator)
+Output:
+------ Traversing employee array ------
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+------- Traversing ename array -------
+Akash
+Mukesh
+Vignesh
+Ramesh
+Avinash
