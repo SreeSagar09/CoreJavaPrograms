@@ -10,7 +10,7 @@ public class StreamInterfaceProgram23 {
 	public static void main(String[] args) {
 		List<Employee> employeeList = Employee.getEmployeesList();
 		
-		Comparator<Employee> salAscEmployeeComparator = (e1, e2)->{
+		Comparator<Employee> esalAscEmployeeComparator = (e1, e2)->{
 			return e1.getEsal().compareTo(e2.getEsal());
 		};
 		
@@ -19,13 +19,13 @@ public class StreamInterfaceProgram23 {
 		};
 		
 		Optional<Employee> minimumSalEmployeeOptional = employeeList.stream()
-				.min(salAscEmployeeComparator);
+				.min(esalAscEmployeeComparator);
 		
 		System.out.println("---- Minimum salary employee -----");
 		System.out.println(minimumSalEmployeeOptional.orElse(null));
 		
 		Optional<Employee> maximumsalEmployeeOptional = employeeList.stream()
-				.max(salAscEmployeeComparator);
+				.max(esalAscEmployeeComparator);
 		
 		System.out.println("---- Maximum salary employee -----");
 		System.out.println(maximumsalEmployeeOptional.orElse(null));

@@ -486,9 +486,15 @@ Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 31
 ----------------------------------------------------------------------------------
 
-24. A Program to show how to use min, max method:
+24. A Program to show how to use count method:
 Program: StreamInterfaceProgram24.java
 Notes:
 * Method signature:
-
+long count()
 Output:
+------ Total employees count ------
+5
+------- Age greaterthan or equals to 25 employee count ------
+4
+----- Salary greaterthan 30000.0 employee count -----
+2
