@@ -381,7 +381,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 ----------------------------------------------------------------------------------
 
-18. A Program to show how to use forEach,  method:
+18. A Program to show how to use toArray method:
 Program: StreamInterfaceProgram18.java
 Notes:
 * Method signature:
@@ -399,3 +399,96 @@ Mukesh
 Vignesh
 Ramesh
 Avinash
+----------------------------------------------------------------------------------
+
+19. A Program to show how to use reduce method:
+Program: StreamInterfaceProgram19.java
+Notes:
+* Method signature:
+T reduce(T identity, BinaryOperator<T> accumulator)
+Output:
+------ Total products price ------
+21740.0
+------- Concatenated product names -------
+Books, Pencils, Bags, Balls, Pens, Bats, Box
+----------------------------------------------------------------------------------
+
+20. A Program to show how to use reduce method:
+Program: StreamInterfaceProgram20.java
+Notes:
+* Method signature:
+Optional<T> reduce(BinaryOperator<T> accumulator)
+Output:
+------- Minimum price product -------
+Product [productId=2, productCode=P002, productName=Pencils, quantity=54, price=5.0]
+------- Maximum price product -------
+Product [productId=6, productCode=P006, productName=Bats, quantity=10, price=560.0]
+-------- Minimum price --------
+5.0
+------- Maximum price --------
+560.0
+------- Concatenated product names -------
+Books, Pencils, Bags, Balls, Pens, Bats, Box
+----------------------------------------------------------------------------------
+
+21. A Program to show how to use reduce method:
+Program: StreamInterfaceProgram21.java
+Notes:
+* Method signature:
+<U> U reduce(U identity, BiFunction<U, ? super T, U> accumulator, BinaryOperator<U> combiner)
+Output:
+-------- Total products price --------
+21740.0
+----------------------------------------------------------------------------------
+
+22. A Program to show how to use toList method:
+Program: StreamInterfaceProgram22.java
+Notes:
+* Method signature:
+default List<T> toList()
+* This toList method returns immutable or unmodifiable List
+* This method introduced in Java 16 version.
+Output:
+------- Unmodifiable employee list -------
+Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
+Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
+Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+------- Unmodifiable ename list --------
+Akash
+Mukesh
+Vignesh
+Ramesh
+Avinash
+-------- Unmodifiable ename and eid list --------
+Akash[E01]
+Mukesh[E02]
+Vignesh[E05]
+Ramesh[E03]
+Avinash[E04]
+----------------------------------------------------------------------------------
+
+23. A Program to show how to use min, max method:
+Program: StreamInterfaceProgram23.java
+Notes:
+* Method signature:
+Optional<T> min(Comparator<? super T> comparator);
+Optional<T> max(Comparator<? super T> comparator);
+Output:
+---- Minimum salary employee -----
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+---- Maximum salary employee -----
+Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
+----- Minimum age -----
+21
+------ Maximum age ------
+31
+----------------------------------------------------------------------------------
+
+24. A Program to show how to use min, max method:
+Program: StreamInterfaceProgram24.java
+Notes:
+* Method signature:
+
+Output:
