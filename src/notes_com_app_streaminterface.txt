@@ -498,3 +498,72 @@ Output:
 4
 ----- Salary greaterthan 30000.0 employee count -----
 2
+----------------------------------------------------------------------------------
+
+25. A Program to show how to use anyMatch, allMatch, noneMatch method:
+Program: StreamInterfaceProgram25.java
+Notes:
+* Method signature:
+boolean anyMatch(Predicate<? super T> predicate)
+boolean allMatch(Predicate<? super T> predicate)
+boolean noneMatch(Predicate<? super T> predicate)
+Output:
+--- Any employee age greaterthan or equals to 25 ---
+true
+--- All employees age greaterthan or equals to 25 ---
+true
+--- No employees age greaterthan or equals to 25 ---
+false
+--- Any employee age greaterthan or equals to 25000.00 ---
+true
+--- All employees age greaterthan or equals to 25000.00 ---
+false
+--- No employees age greaterthan or equals to 25000.00 ---
+false
+----------------------------------------------------------------------------------
+
+26. A Program to show how to use findFirst, findAny method:
+Program: StreamInterfaceProgram26.java
+Notes:
+* Method signature:
+Optional<T> findFirst()
+Optional<T> findAny()
+Output:
+--- Ramesh employee ---
+Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
+--- Raju employee ---
+null
+----------------------------------------------------------------------------------
+
+27. A Program to show how to use iterate method:
+Program: StreamInterfaceProgram27.java
+Notes:
+* Method signature:
+public static<T> Stream<T> iterate(final T seed, final UnaryOperator<T> f)
+Output:
+---- Integer numbers ----
+-2
+-1
+0
+1
+2
+---- Whole numbers ----
+0
+1
+2
+3
+4
+---- '*' String ----
+*
+**
+***
+****
+*****
+----------------------------------------------------------------------------------
+
+28. A Program to show how to use iterate method:
+Program: StreamInterfaceProgram28.java
+Notes:
+* Method signature:
+public static<T> Stream<T> iterate(T seed, Predicate<? super T> hasNext, UnaryOperator<T> next)
+Output:

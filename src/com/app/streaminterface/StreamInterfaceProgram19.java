@@ -1,7 +1,6 @@
 package com.app.streaminterface;
 
 import java.util.List;
-import java.util.function.BiFunction;
 import java.util.function.BinaryOperator;
 
 import com.app.models.Product;
