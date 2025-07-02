@@ -1,4 +1,4 @@
-1. A Program to show how to use toCollection method:
+1. A Program to show how to use 'toCollection' method:
 Program: CollectorsClassProgram1.java
 Notes:
 * Method signature:
@@ -24,7 +24,7 @@ Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 ----------------------------------------------------------------------------------
 
-2. A Program to show how to use toCollection method:
+2. A Program to show how to use 'toCollection' method:
 Program: CollectorsClassProgram2.java
 Notes:
 * Method signature:
@@ -40,7 +40,7 @@ Bats
 Box
 ----------------------------------------------------------------------------------
 
-3. A Program to show how to use toMap method:
+3. A Program to show how to use 'toMap' method:
 Program: CollectorsClassProgram3.java
 Notes:
 * Method signature:
@@ -64,7 +64,7 @@ Pencils --> 5.0
 Pens --> 15.0
 ----------------------------------------------------------------------------------
 
-4. A Program to show how to use toMap method:
+4. A Program to show how to use 'toMap' method:
 Program: CollectorsClassProgram4.java
 Notes:
 * Method signature:
@@ -114,7 +114,7 @@ Pencils - 5.0
 Pens - 15.0
 ----------------------------------------------------------------------------------
 
-5. A Program to show how to use toMap method:
+5. A Program to show how to use 'toMap' method:
 Program: CollectorsClassProgram5.java
 Notes:
 * Method signature:

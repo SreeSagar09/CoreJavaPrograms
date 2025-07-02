@@ -1,0 +1,65 @@
+1. A Program to show how to use 'of' method:
+Program: OptionalClassProgram1.java
+Notes:
+* This method returns an Optional object of the given non-null value.
+* If the given element is null then it throw java.lang.NullPointerException, means it will not accept null element.
+* Method signature:
+public static <T> Optional<T> of(T value)
+Output:
+----- Printing optional object -----
+Optional[Sree Sagar]
+----- Printing optional value -----
+Sree Sagar
+----------------------------------------------------------------
+
+2. A Program to show how to use 'ofNullable' method:
+Program: OptionalClassProgram2.java
+Notes:
+* This method returns an Optional object of the given non-null value, if the Optional value is null it will return empty Optional.
+* If the Optional value is null then if we call get method it will throw java.util.NoSuchElementException exception.
+* Method signature:
+public static <T> Optional<T> ofNullable(T value)
+Output:
+----- Printing optional object -----
+Optional.empty
+----- Printing optional object -----
+Optional[10]
+----- Printing optional value -----
+10
+----------------------------------------------------------------
+
+3. A Program to show how to use 'empty' method:
+Program: OptionalClassProgram3.java
+Notes:
+* This method return an empty value Optional object. 
+* Method signature:
+public static<T> Optional<T> empty()
+Output:
+----- Printing optional object -----
+Optional.empty
+----------------------------------------------------------------
+
+4. A Program to show how to use 'get' method:
+Program: OptionalClassProgram4.java
+Notes:
+* This method is used to get the value of Optional object.
+* If Optional object contain null value then this method will throw java.util.NoSuchElementException exception.
+* Before calling 'get' method check value is present or not by using 'isPresent' or 'isEmpty' methods.
+* Method signature:
+public T get()
+Output:
+Value-1: null
+Value-2: 10
+
+----------------------------------------------------------------
+
+5. A Program to show how to use 'isPresent', 'isEmpty' method:
+Program: OptionalClassProgram5.java
+Notes:
+* 'isPresent', 'isEmpty' methods are used to check whether value is present or not in Optional object.
+* 'isPresent' method will return true if value is present, otherwise return false.
+* 'isEmpty' method will return true if value is not present, otherwise return true.
+* Method signature:
+public boolean isPresent()
+public boolean isEmpty()
+Output:

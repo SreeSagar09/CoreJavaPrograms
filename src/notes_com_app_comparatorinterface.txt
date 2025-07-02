@@ -36,7 +36,7 @@ Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
 Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 --------------------------------------------------------------------
 
-3. A Program to show how to use comparingDouble method:
+3. A Program to show how to use 'comparingDouble' method:
 Program: ComparatorInterfaceProgram3.java
 Notes:
 * Method signature:
@@ -50,7 +50,7 @@ Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 --------------------------------------------------------------------
 
-4. A Program to show how to use comparingInt method:
+4. A Program to show how to use 'comparingInt' method:
 Program: ComparatorInterfaceProgram4.java
 Notes:
 * Method signature:
@@ -64,7 +64,7 @@ Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 --------------------------------------------------------------------
 
-5. A Program to show how to use comparingLong method:
+5. A Program to show how to use 'comparingLong' method:
 Program: ComparatorInterfaceProgram5.java
 Notes:
 * Method signature:
@@ -78,7 +78,7 @@ Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 --------------------------------------------------------------------
 
-6. A Program to show how to use comparing method:
+6. A Program to show how to use 'comparing' method:
 Program: ComparatorInterfaceProgram6.java
 Notes:
 * Method signature:
@@ -104,7 +104,7 @@ Employee [eid=E02, ename=Mukesh, age=29, esal=35000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 --------------------------------------------------------------------
 
-7. A Program to show how to use comparing method:
+7. A Program to show how to use 'comparing' method:
 Program: ComparatorInterfaceProgram7.java
 Notes:
 * Method signature:
@@ -136,7 +136,7 @@ Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
 Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 --------------------------------------------------------------------
 
-8. A Program to show how to use nullsFirst method:
+8. A Program to show how to use 'nullsFirst' method:
 Program: ComparatorInterfaceProgram8.java
 Notes:
 * This method is used to place all null value first in order
@@ -159,7 +159,7 @@ Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
 --------------------------------------------------------------------
 
-9. A Program to show how to use nullsLast method:
+9. A Program to show how to use 'nullsLast' method:
 Program: ComparatorInterfaceProgram9.java
 Notes:
 * This method is used to place all null value last in order
@@ -182,7 +182,7 @@ Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
 null
 --------------------------------------------------------------------
 
-10. A Program to show how to use naturalOrder method:
+10. A Program to show how to use 'naturalOrder' method:
 Program: ComparatorInterfaceProgram10.java
 Notes:
 * This method return Comparable order of Comparator object.
@@ -198,7 +198,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-11. A Program to show how to use reverseOrder method:
+11. A Program to show how to use 'reverseOrder' method:
 Program: ComparatorInterfaceProgram11.java
 Notes:
 * This method return Comparable order of Comparator object.
@@ -214,7 +214,7 @@ Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
 --------------------------------------------------------------------
 
-12. A Program to show how to use thenComparingDouble method:
+12. A Program to show how to use 'thenComparingDouble' method:
 Program: ComparatorInterfaceProgram12.java
 Notes:
 * Method signature:
@@ -230,7 +230,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-13. A Program to show how to use thenComparingInt method:
+13. A Program to show how to use 'thenComparingInt' method:
 Program: ComparatorInterfaceProgram13.java
 Notes:
 * Method signature:
@@ -246,7 +246,7 @@ Employee [eid=E07, ename=Ramesh, age=22, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-14. A Program to show how to use thenComparingLong method:
+14. A Program to show how to use 'thenComparingLong' method:
 Program: ComparatorInterfaceProgram14.java
 Notes:
 * Method signature:
@@ -262,7 +262,7 @@ Employee [eid=E07, ename=Ramesh, age=22, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-15. A Program to show how to use thenComparing method:
+15. A Program to show how to use 'thenComparing' method:
 Program: ComparatorInterfaceProgram15.java
 Notes:
 * Method signature:
@@ -286,7 +286,7 @@ Employee [eid=E07, ename=Ramesh, age=22, esal=20000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-16. A Program to show how to use thenComparing method[2-Arguments]:
+16. A Program to show how to use 'thenComparing' method[2-Arguments]:
 Program: ComparatorInterfaceProgram16.java
 Notes:
 * Method signature:
@@ -326,7 +326,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-17. A Program to show how to use thenComparing method:
+17. A Program to show how to use 'thenComparing' method:
 Program: ComparatorInterfaceProgram17.java
 Notes:
 * Method signature:
@@ -350,7 +350,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 --------------------------------------------------------------------
 
-18. A Program to show how to use reversed method:
+18. A Program to show how to use 'reversed' method:
 Program: ComparatorInterfaceProgram18.java
 Notes:
 * Method signature:

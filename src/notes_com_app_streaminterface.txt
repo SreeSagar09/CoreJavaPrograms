@@ -1,7 +1,7 @@
-1. A Program to show how to use of method:
+1. A Program to show how to use 'of' method:
 Program: StreamInterfaceProgram1.java
 Notes:
-* This method returns a sequential stream containing a single element.
+* This method returns a sequential Stream containing a single element.
 * If the given element is null then it throw java.lang.NullPointerException, means it will not accept null element.
 * Method signature:
 public static<T> Stream<T> of(T t)
@@ -10,10 +10,10 @@ Output:
 15
 ----------------------------------------------------------------------------------
 
-2. A Program to show how to use ofNullable method:
+2. A Program to show how to use 'ofNullable' method:
 Program: StreamInterfaceProgram2.java
 Notes:
-* This method returns a sequential stream containing a single element, if non-null, otherwise returns an empty stream
+* This method returns a sequential Stream containing a single element, if non-null, otherwise returns an empty Stream
 * Method signature:
 public static<T> Stream<T> ofNullable(T t)
 Output:
@@ -22,10 +22,10 @@ Output:
 10
 ----------------------------------------------------------------------------------
 
-3. A Program to show how to use of method[var argument]:
+3. A Program to show how to use 'of' method:
 Program: StreamInterfaceProgram3.java
 Notes:
-* This method returns a sequential ordered stream whose elements are the specified values.
+* This method returns a sequential ordered Stream whose elements are the specified values.
 * Method signature:
 public static<T> Stream<T> of(T... values)
 Output:
@@ -44,7 +44,7 @@ a
 r
 ----------------------------------------------------------------------------------
 
-4. A Program to show how to use filter method:
+4. A Program to show how to use 'filter' method:
 Program: StreamInterfaceProgram4.java
 Notes:
 * Method signature:
@@ -61,7 +61,7 @@ Product [productId=2, productCode=P002, producName=Pencils, quantity=54, price=5
 Product [productId=5, productCode=P005, producName=Pens, quantity=120, price=15.0]
 ----------------------------------------------------------------------------------
 
-5. A Program to show how to use map method:
+5. A Program to show how to use 'map' method:
 Program: StreamInterfaceProgram5.java
 Notes:
 * Method signature:
@@ -85,7 +85,7 @@ Box[P007]
 6750.0
 ----------------------------------------------------------------------------------
 
-6. A Program to show how to use mapToInt, mapToLong and mapToDouble method:
+6. A Program to show how to use 'mapToInt', 'mapToLong' and 'mapToDouble' method:
 Program: StreamInterfaceProgram6.java
 Notes:
 * Method signature:
@@ -127,7 +127,7 @@ Output:
 6750.0
 ----------------------------------------------------------------------------------
 
-7. A Program to show how to use flatMap method:
+7. A Program to show how to use 'flatMap' method:
 Program: StreamInterfaceProgram7.java
 Notes:
 * Method signature:
@@ -154,7 +154,7 @@ Output:
 9876540021
 ----------------------------------------------------------------------------------
 
-8. A Program to show how to use distinct method:
+8. A Program to show how to use 'distinct' method:
 Program: StreamInterfaceProgram8.java
 Notes:
 * Method signature:
@@ -176,12 +176,12 @@ Output:
 6
 ----------------------------------------------------------------------------------
 
-9. A Program to show how to use sorted method:
+9. A Program to show how to use 'sorted' method:
 Program: StreamInterfaceProgram9.java
 Notes:
 * Method signature:
 Stream<T> sorted()
-* If the elements of this stream are not Comparable, a java.lang.ClassCastException may be thrown when the terminal operation is executed. 
+* If the elements of this Stream are not Comparable, a java.lang.ClassCastException may be thrown when the terminal operation is executed. 
 Output:
 ----- Employee list -----
 Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
@@ -197,7 +197,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 ----------------------------------------------------------------------------------
 
-10. A Program to show how to use sorted method:
+10. A Program to show how to use 'sorted' method:
 Program: StreamInterfaceProgram10.java
 Notes:
 * Method signature:
@@ -237,7 +237,7 @@ Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, 
 Student [studentId=S002, firstName=Akash, lastName=Komma, fullName=Akash Komma, age=21, courseFee=28000.0, phoneNumbers=[9876540321, 9876504321, 9876054321, 9870543201, 9806543021]]
 ----------------------------------------------------------------------------------
 
-11. A Program to show how to use peek method:
+11. A Program to show how to use 'peek' method:
 Program: StreamInterfaceProgram11.java
 Notes:
 * Method signature:
@@ -256,15 +256,15 @@ Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 Avinash
 ----------------------------------------------------------------------------------
 
-12. A Program to show how to use limit method:
+12. A Program to show how to use 'limit' method:
 Program: StreamInterfaceProgram12.java
 Notes:
 * Method signature:
 Stream<T> limit(long maxSize)
-* If maxSize is equals to zero then limit method return empty stream.
+* If maxSize is equals to zero then limit method return empty Stream.
 * If maxSize is negative value then limit method throw java.lang.IllegalArgumentException.
-* If maxSize is greaterthan or equals to stream size then limit method return all elements of stream.
-* If maxSize is equals to long max value then limit method return all elements of stream.
+* If maxSize is greaterthan or equals to stream size then limit method return all elements of Stream.
+* If maxSize is equals to long max value then limit method return all elements of Stream.
 Output:
 ----- Students are limited upto zero ------
 ----- Students are limited upto two ------
@@ -285,14 +285,14 @@ Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, 
 Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, courseFee=28500.0, phoneNumbers=[]]
 ----------------------------------------------------------------------------------
 
-13. A Program to show how to use skip method:
+13. A Program to show how to use 'skip' method:
 Program: StreamInterfaceProgram13.java
 Notes:
 * Method signature:
 Stream<T> skip(long n)
-* If n is equals to zero then skip method return all elements of stream.
+* If n is equals to zero then skip method return all elements of Stream.
 * If n is negative value then skip method throw java.lang.IllegalArgumentException.
-* if n is equals to Long max value then skip method return empty stream.
+* if n is equals to Long max value then skip method return empty Stream.
 Output:
 ----- Students are skipped upto zero ------
 Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
@@ -310,12 +310,12 @@ Student [studentId=S007, firstName=Mahi, lastName=, fullName=Mahi , age=26, cour
 ----- Students are skipped upto Long max value ------
 ----------------------------------------------------------------------------------
 
-14. A Program to show how to use takeWhile method:
+14. A Program to show how to use 'takeWhile' method:
 Program: StreamInterfaceProgram14.java
 Notes:
 * Method signature:
 default Stream<T> takeWhile(Predicate<? super T> predicate)
-* It will takes the elements from the stream until it matches the given predicate.
+* It will takes the elements from the Stream until it matches the given predicate.
 Output:
 ----- take while age lessthan or equals to 25 from unSorted List -----
 Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
@@ -326,12 +326,12 @@ Student [studentId=S006, firstName=Vijay, lastName=Peddi, fullName=Vijay Peddi, 
 Student [studentId=S001, firstName=Ravi, lastName=Rajam, fullName=Ravi Rajam, age=25, courseFee=25000.0, phoneNumbers=[9876543210, 9876543201, 9876543021]]
 ----------------------------------------------------------------------------------
 
-15. A Program to show how to use takeWhile method:
+15. A Program to show how to use 'takeWhile' method:
 Program: StreamInterfaceProgram15.java
 Notes:
 * Method signature:
 default Stream<T> dropWhile(Predicate<? super T> predicate)
-* It will drop the elements from the stream until it matches the given predicate.
+* It will drop the elements from the Stream until it matches the given predicate.
 Output:
 ----- drop while age lessthan or equals to 25 from unSorted List -----
 Student [studentId=S003, firstName=Avinath, lastName=Karre, fullName=Avinath Karre, age=26, courseFee=30000.0, phoneNumbers=[9870654321]]
@@ -346,7 +346,7 @@ Student [studentId=S004, firstName=Zaffer, lastName=MD, fullName=Zaffer MD, age=
 Student [studentId=S005, firstName=Ganesh, lastName=Poly, fullName=Ganesh Poly, age=31, courseFee=29000.0, phoneNumbers=[9876543010, 9876540201, 9876503021]]
 ----------------------------------------------------------------------------------
 
-16. A Program to show how to use forEach, forEachOrdered method:
+16. A Program to show how to use 'forEach', 'forEachOrdered' method:
 Program: StreamInterfaceProgram16.java
 Notes:
 * Method signature:
@@ -367,7 +367,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 ----------------------------------------------------------------------------------
 
-17. A Program to show how to use toArray method:
+17. A Program to show how to use 'toArray' method:
 Program: StreamInterfaceProgram17.java
 Notes:
 * Method signature:
@@ -381,7 +381,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 ----------------------------------------------------------------------------------
 
-18. A Program to show how to use toArray method:
+18. A Program to show how to use 'toArray' method:
 Program: StreamInterfaceProgram18.java
 Notes:
 * Method signature:
@@ -401,7 +401,7 @@ Ramesh
 Avinash
 ----------------------------------------------------------------------------------
 
-19. A Program to show how to use reduce method:
+19. A Program to show how to use 'reduce' method:
 Program: StreamInterfaceProgram19.java
 Notes:
 * Method signature:
@@ -413,7 +413,7 @@ Output:
 Books, Pencils, Bags, Balls, Pens, Bats, Box
 ----------------------------------------------------------------------------------
 
-20. A Program to show how to use reduce method:
+20. A Program to show how to use 'reduce' method:
 Program: StreamInterfaceProgram20.java
 Notes:
 * Method signature:
@@ -431,7 +431,7 @@ Product [productId=6, productCode=P006, productName=Bats, quantity=10, price=560
 Books, Pencils, Bags, Balls, Pens, Bats, Box
 ----------------------------------------------------------------------------------
 
-21. A Program to show how to use reduce method:
+21. A Program to show how to use 'reduce' method:
 Program: StreamInterfaceProgram21.java
 Notes:
 * Method signature:
@@ -441,7 +441,7 @@ Output:
 21740.0
 ----------------------------------------------------------------------------------
 
-22. A Program to show how to use toList method:
+22. A Program to show how to use 'toList' method:
 Program: StreamInterfaceProgram22.java
 Notes:
 * Method signature:
@@ -469,7 +469,7 @@ Ramesh[E03]
 Avinash[E04]
 ----------------------------------------------------------------------------------
 
-23. A Program to show how to use min, max method:
+23. A Program to show how to use 'min', 'max' method:
 Program: StreamInterfaceProgram23.java
 Notes:
 * Method signature:
@@ -486,7 +486,7 @@ Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 31
 ----------------------------------------------------------------------------------
 
-24. A Program to show how to use count method:
+24. A Program to show how to use 'count' method:
 Program: StreamInterfaceProgram24.java
 Notes:
 * Method signature:
@@ -500,7 +500,7 @@ Output:
 2
 ----------------------------------------------------------------------------------
 
-25. A Program to show how to use anyMatch, allMatch, noneMatch method:
+25. A Program to show how to use 'anyMatch', 'allMatch', 'noneMatch' method:
 Program: StreamInterfaceProgram25.java
 Notes:
 * Method signature:
@@ -522,7 +522,7 @@ false
 false
 ----------------------------------------------------------------------------------
 
-26. A Program to show how to use findFirst, findAny method:
+26. A Program to show how to use 'findFirst', 'findAny' method:
 Program: StreamInterfaceProgram26.java
 Notes:
 * Method signature:
@@ -535,7 +535,7 @@ Employee [eid=E03, ename=Ramesh, age=21, esal=19000.0]
 null
 ----------------------------------------------------------------------------------
 
-27. A Program to show how to use iterate method:
+27. A Program to show how to use 'iterate' method:
 Program: StreamInterfaceProgram27.java
 Notes:
 * Method signature:
@@ -561,9 +561,73 @@ Output:
 *****
 ----------------------------------------------------------------------------------
 
-28. A Program to show how to use iterate method:
+28. A Program to show how to use 'iterate' method:
 Program: StreamInterfaceProgram28.java
 Notes:
 * Method signature:
-public static<T> Stream<T> iterate(T seed, Predicate<? super T> hasNext, UnaryOperator<T> next)
+public static<T> Stream<T> iterate(T seed, Predicate<? super T> hasNext, UnaryOperator<T> next) 
 Output:
+----- Integer numbers -----
+1
+2
+3
+4
+5
+----------------------------------------------------------------------------------
+
+29. A Program to show how to use 'generate' method:
+Program: StreamInterfaceProgram29.java
+Notes:
+* Method signature:
+public static<T> Stream<T> generate(Supplier<? extends T> s)
+Output:
+----- NanoTime stream of long -----
+1298357643545800
+1298357643685400
+1298357643718700
+1298357643754200
+1298357643781700
+----- RandomUUID stream of string -----
+026babda-fdac-4639-bc52-4ebc128c79df
+349b5835-5132-45ae-b0eb-c239f9db4842
+f7825c6c-fd81-4656-98fb-d6f1bc6e3f59
+e5c33a32-00c3-48b5-8240-f33381e6cdfc
+ea6d1962-8b4e-4655-9d0b-2fe386b4efba
+----------------------------------------------------------------------------------
+
+30. A Program to show how to use 'concat' method:
+Program: StreamInterfaceProgram30.java
+Notes:
+* Method signature:
+public static <T> Stream<T> concat(Stream<? extends T> a, Stream<? extends T> b)
+Output:
+----- Concatenated integer stream -----
+1
+2
+3
+4
+5
+10
+9
+8
+7
+6
+----------------------------------------------------------------------------------
+
+31. A Program to show how to use 'builder' method:
+Program: StreamInterfaceProgram31.java
+Notes:
+* Method signature:
+public static<T> Builder<T> builder()
+Output:
+----- Integer stream -----
+1
+2
+3
+4
+5
+----- String stream -----
+Sagar
+Balaji
+Gopal
+Mukesh
