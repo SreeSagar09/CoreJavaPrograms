@@ -59,7 +59,104 @@ Notes:
 * 'isPresent', 'isEmpty' methods are used to check whether value is present or not in Optional object.
 * 'isPresent' method will return true if value is present, otherwise return false.
 * 'isEmpty' method will return true if value is not present, otherwise return true.
+* The 'isEmpty' method is introduced in java 11 version. 
 * Method signature:
 public boolean isPresent()
 public boolean isEmpty()
+Output:
+----- isPresent method with null value Optional -----
+false
+----- isEmpty method with null value Optional -----
+true
+----- isPresent method with non-null value Optional -----
+true
+----- isEmpty method with non-null value Optional -----
+false
+----------------------------------------------------------------
+
+6. A Program to show how to use 'ifPresent' method:
+Program: OptionalClassProgram6.java
+Notes:
+* If a value is present, performs the given action with the value, otherwise does nothing.
+* Method signature:
+public void ifPresent(Consumer<? super T> action)
+Output:
+---- ifPresent method with non-null value Optional ----
+Optional value: Mamidala Sree Sagar
+---- ifPresent method with null value Optional ----
+----------------------------------------------------------------
+
+7. A Program to show how to use 'ifPresentOrElse' method:
+Program: OptionalClassProgram7.java
+Notes:
+* If a value is present, performs the given action with the value, otherwise performs the given empty action.
+* This method is introduced in java 9 version.
+* Method signature:
+public void ifPresentOrElse(Consumer<? super T> action, Runnable emptyAction)
+Output:
+---- ifPresent method with non-null value Optional ----
+Optional value: Mamidala Sree Sagar
+---- ifPresent method with null value Optional ----
+No value present.
+----------------------------------------------------------------
+
+8. A Program to show how to use 'filter' method:
+Program: OptionalClassProgram8.java
+Notes:
+* If value is not present, it will return same Optional object and if value is matches with the given predicate then return the Optional object with value other wise return empty Optional object.
+* Method signature:
+public Optional<T> filter(Predicate<? super T> predicate)
+Output:
+----- Predicate matches with non-null optional value -----
+Optional[Product [productId=3, productCode=P003, productName=Bags, quantity=24, price=250.0]]
+----- Predicate not matches with non-null optional value ------
+Optional.empty
+----- Predicate matches or not matches with non-null optional value ------
+Optional.empty
+----------------------------------------------------------------
+
+9. A Program to show how to use 'map' method:
+Program: OptionalClassProgram9.java
+Notes:
+* if value is present then it will return Optional object of given Function interface apply method return value other wise empty Optional object. 
+* Method signature:
+public <U> Optional<U> map(Function<? super T, ? extends U> mapper)
+Output:
+----- map method with non-null optional value -----
+Optional[Ramesh[E03]]
+----- map method with non-null optional value -----
+Optional.empty
+----------------------------------------------------------------
+
+10. A Program to show how to use 'flatMap' method:
+Program: OptionalClassProgram10.java
+Notes:
+* Method signature:
+public <U> Optional<U> flatMap(Function<? super T, ? extends Optional<? extends U>> mapper)
+Output:
+----- flatMap method with non-null optional value -----
+Optional[HDD]
+----- flatMap method with null optional value -----
+Optional.empty
+----------------------------------------------------------------
+
+11. A Program to show how to use 'or' method:
+Program: OptionalClassProgram11.java
+Notes:
+* If value is present, returns an Optional object value, otherwise returns an Optional produced by the supplying function.
+* Method signature:
+public Optional<T> or(Supplier<? extends Optional<? extends T>> supplier)
+Output:
+----- or method with non-null optional value -----
+Optional[Mamidala Sree Sagar]
+----- or method with null optional value ------
+Optional[No value present.]
+----------------------------------------------------------------
+
+12. A Program to show how to use 'or' method:
+Program: OptionalClassProgram12.java
+Notes:
+* If value is present, returns an Optional object value, otherwise returns an Optional produced by the supplying function.
+* Method signature:
+public Optional<T> or(Supplier<? extends Optional<? extends T>> supplier)
 Output:
