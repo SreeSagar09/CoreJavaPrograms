@@ -144,6 +144,7 @@ Optional.empty
 Program: OptionalClassProgram11.java
 Notes:
 * If value is present, returns an Optional object value, otherwise returns an Optional produced by the supplying function.
+* If supplier is null then it will throw java.lang.NullPointerException.
 * Method signature:
 public Optional<T> or(Supplier<? extends Optional<? extends T>> supplier)
 Output:
@@ -153,10 +154,65 @@ Optional[Mamidala Sree Sagar]
 Optional[No value present.]
 ----------------------------------------------------------------
 
-12. A Program to show how to use 'or' method:
+12. A Program to show how to use 'stream' method:
 Program: OptionalClassProgram12.java
 Notes:
-* If value is present, returns an Optional object value, otherwise returns an Optional produced by the supplying function.
+* If a value is present, returns a sequential Stream containing only that value, otherwise returns an empty Stream.
 * Method signature:
-public Optional<T> or(Supplier<? extends Optional<? extends T>> supplier)
+public Stream<T> stream()
 Output:
+----- stream method with non-null optional value -----
+Mamidala Sree Sagar
+----- stream method with null optional value -----
+----------------------------------------------------------------
+
+13. A Program to show how to use 'orElse' method:
+Program: OptionalClassProgram13.java
+Notes:
+* If a value is present, returns the value, otherwise returns other.
+* Method signature:
+public T orElse(T other)
+Output:
+----- orElse method with non-null optional value -----
+Mamidala Sree Sagar
+----- stream method with null optional value -----
+No value
+----------------------------------------------------------------
+
+14. A Program to show how to use 'orElseGet' method:
+Program: OptionalClassProgram14.java
+Notes:
+* If a value is present, returns the value, otherwise returns the result produced by the supplying function.
+* If supplier is null then it will throw java.lang.NullPointerException.
+* Method signature:
+public T orElseGet(Supplier<? extends T> supplier)
+Output:
+----- orElseGet method with non-null optional value -----
+Mamidala Sree Sagar
+----- orElseGet method with null optional value -----
+No value
+----------------------------------------------------------------
+
+15. A Program to show how to use 'orElseThrow' method:
+Program: OptionalClassProgram15.java
+Notes:
+* If a value is present, returns the value, otherwise throws java.util.NoSuchElementException.
+* Method signature:
+public T orElseThrow()
+Output:
+----- orElseThrow method with non-null optional value -----
+Mamidala Sree Sagar
+Exception in thread "main" java.util.NoSuchElementException: No value present
+----------------------------------------------------------------
+
+16. A Program to show how to use 'orElseThrow' method:
+Program: OptionalClassProgram16.java
+Notes:
+* If a value is present, returns the value, otherwise throws an exception produced by the exception supplying function.
+* If exceptionSupplier is null then it will throw java.lang.NullPointerException.
+* Method signature:
+public <X extends Throwable> T orElseThrow(Supplier<? extends X> exceptionSupplier) throws X
+Output:
+----- orElseThrow method with non-null optional value -----
+Mamidala Sree Sagar
+Exception in thread "main" java.lang.NullPointerException: optional value is null.
