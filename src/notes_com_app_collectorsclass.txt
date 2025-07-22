@@ -3,6 +3,7 @@ Program: CollectorsClassProgram1.java
 Notes:
 * Method signature:
 public static <T, C extends Collection<T>> Collector<T, ?, C> toCollection(Supplier<C> collectionFactory)
+* This 'toCollection' method return mutable supplier type collection object.
 Output:
 ----- Collection to ArrayList -----
 Employee [eid=E01, ename=Akash, age=25, esal=25000.0]
@@ -24,11 +25,12 @@ Employee [eid=E05, ename=Vignesh, age=28, esal=30000.0]
 Employee [eid=E04, ename=Avinash, age=31, esal=55000.0]
 ----------------------------------------------------------------------------------
 
-2. A Program to show how to use 'toCollection' method:
+2. A Program to show how to use 'toList' method:
 Program: CollectorsClassProgram2.java
 Notes:
 * Method signature:
 public static <T> Collector<T, ?, List<T>> toList()
+* This 'toList' method mutable List object.
 Output:
 ----- ProductName List -----
 Books
@@ -45,6 +47,7 @@ Program: CollectorsClassProgram3.java
 Notes:
 * Method signature:
 public static <T, K, U> Collector<T, ?, Map<K,U>> toMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper)
+* This 'toMap' method return mutable Map object.
 Output:
 ----- ProductCode and ProductName map -----
 P005 --> Pens
@@ -130,15 +133,15 @@ P006 - Bats - 10 - 560.0
 P007 - Box - 45 - 150.0
 P008 - Bags - 25 - 300.0
 P009 - Bats - 5 - 500.0
---- ProductName and Quantity HashMap[if productName is duplicate then maxmum quantity as value.] ---
-Bats - 10
-Bags - 25
+--- ProductName and Quantity HashMap[if productName is duplicate then minimum quantity as value.] ---
+Bats - 5
+Bags - 24
 Box - 45
 Balls - 34
 Books - 12
 Pencils - 54
 Pens - 120
---- ProductName and Quantity LinkedHashMap[if productName is duplicate then maxmum quantity as value.] ---
+--- ProductName and Quantity LinkedHashMap[if productName is duplicate then maximum quantity as value.] ---
 Books - 12
 Pencils - 54
 Bags - 25
@@ -146,3 +149,127 @@ Balls - 34
 Pens - 120
 Bats - 10
 Box - 45
+--- ProductName and Quantity LinkedHashMap[if productName is duplicate then first come quantity as value.] ---
+Books - 12
+Pencils - 54
+Bags - 24
+Balls - 34
+Pens - 120
+Bats - 10
+Box - 45
+--- ProductName and Quantity LinkedHashMap[if productName is duplicate then last come quantity as value.] ---
+Books - 12
+Pencils - 54
+Bags - 25
+Balls - 34
+Pens - 120
+Bats - 5
+Box - 45
+--- ProductName and Quantity LinkedHashMap[if productName is duplicate then sum of quantity as value.] ---
+Books - 12
+Pencils - 54
+Bags - 49
+Balls - 34
+Pens - 120
+Bats - 15
+Box - 45
+----------------------------------------------------------------------------------
+
+6. A Program to show how to use 'toUnmodifiableList' method:
+Program: CollectorsClassProgram6.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, List<T>> toUnmodifiableList()
+* This 'toUnmodifiableList' method return immutable List object.
+* If we try to modify the list then it will throw 'java.lang.UnsupportedOperationException' exception.
+* If Collector encounter with null value, it will throw 'java.lang.NullPointerException' exception.
+Output:
+------ Product name unmodifiable/immutable list -------
+Books
+Pencils
+Bags
+Balls
+Pens
+Bats
+Box
+------ Product name and code unmodifiable/immutable list ------
+Books[P001]
+Pencils[P002]
+Bags[P003]
+Balls[P004]
+Pens[P005]
+Bats[P006]
+Box[P007]
+----------------------------------------------------------------------------------
+
+7. A Program to show how to use 'toSet' method:
+Program: CollectorsClassProgram7.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, Set<T>> toSet()
+* This 'toSet' method return mutable Set object.
+Output:
+------ Product name set -------
+null
+Bats
+Bags
+Box
+Balls
+Books
+Pencils
+Pens
+------ Product name and code set ------
+Books[P001]
+Pens[P005]
+Pencils[P002]
+Bags[P003]
+Bats[P006]
+Balls[P004]
+Bags[P008]
+null[P009]
+Box[P007]
+----------------------------------------------------------------------------------
+
+8. A Program to show how to use 'toUnmodifiableSet' method:
+Program: CollectorsClassProgram8.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, Set<T>> toUnmodifiableSet()
+* This 'toUnmodifiableSet' method return immutable Set object.
+* If we try to modify the set then it will throw 'java.lang.UnsupportedOperationException' exception.
+* If Collector encounter with null value, it will throw 'java.lang.NullPointerException' exception.
+Output:
+------ Product name unmodifiable/immutable set -------
+Pencils
+Pens
+Bags
+Balls
+Box
+Bats
+Books
+------ Product name and code unmodifiable/immutable set ------
+Balls[P004]
+Pens[P005]
+Bats[P009]
+Bags[P003]
+Pencils[P002]
+Bats[P006]
+Books[P001]
+Box[P007]
+Bags[P008]
+----------------------------------------------------------------------------------
+
+9. A Program to show how to use 'joining' method:
+Program: CollectorsClassProgram9.java
+Notes:
+* Method signature:
+public static Collector<CharSequence, ?, String> joining()
+public static Collector<CharSequence, ?, String> joining(CharSequence delimiter)
+public static Collector<CharSequence, ?, String> joining(CharSequence delimiter, CharSequence prefix, CharSequence suffix)
+Output:
+----- Joining product names -----
+BooksPencilsBagsBallsPensBatsBox
+----- Joining product names delimiter-----
+Books, Pencils, Bags, Balls, Pens, Bats, Box
+----- Joining product names delimiter and prefix and suffix -----
+@Books-Pencils-Bags-Balls-Pens-Bats-Box#
