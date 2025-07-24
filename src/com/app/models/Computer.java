@@ -132,6 +132,9 @@ public class Computer implements Comparable<Computer> {
 		computerList.add(new Computer("Lenovo", "ThinkPad", "Intel - I5", "8Gb", "500Gb", 45000d, Optional.of("SSD"), Optional.ofNullable(null)));
 		computerList.add(new Computer("Dell", "Inspiron", "Intel - I7", "8Gb", "500Gb", 40000d, Optional.of("HDD"), Optional.of("2Gb-AMD")));
 		computerList.add(new Computer("Dell", "Latitude", "Nvidia", "8Gb", "1Tb", 65000d, Optional.of("HDD"), Optional.of("2Gb-AMD")));
+		computerList.add(new Computer("HP", "OmniBook", "AMD Ryzen", "16Gb", "1Tb", 85000d, Optional.of("SSD"), Optional.of("2Gb-AMD")));
+		computerList.add(new Computer("HP", "EliteBook", "Intel - I7", "4Gb", "500Gb", 55000d, Optional.of("HDD"), Optional.of(null)));
+		computerList.add(new Computer("Acer", "Aspire3", "Intel - I5", "8Gb", "500Gb", 65000d, Optional.of("SSD"), Optional.of(null)));
 		
 		return computerList;
 	}

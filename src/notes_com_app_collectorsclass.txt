@@ -273,3 +273,111 @@ BooksPencilsBagsBallsPensBatsBox
 Books, Pencils, Bags, Balls, Pens, Bats, Box
 ----- Joining product names delimiter and prefix and suffix -----
 @Books-Pencils-Bags-Balls-Pens-Bats-Box#
+----------------------------------------------------------------------------------
+
+10. A Program to show how to use 'mapping' method:
+Program: CollectorsClassProgram10.java
+Notes:
+* Method signature:
+public static <T, U, A, R> Collector<T, ?, R> mapping(Function<? super T, ? extends U> mapper, Collector<? super U, A, R> downstream)
+Output:
+------- Product name list --------
+Books
+Pencils
+Bags
+Balls
+Pens
+Bats
+Box
+------- Sum of all products price -------
+1035.0
+------- Maximum quantity value ------
+120
+--------- Minimum quantity value --------
+10
+----------------------------------------------------------------------------------
+
+11. A Program to show how to use 'flatMapping' method:
+Program: CollectorsClassProgram11.java
+Notes:
+* Method signature:
+public static <T, U, A, R> Collector<T, ?, R> flatMapping(Function<? super T, ? extends Stream<? extends U>> mapper, Collector<? super U, A, R> downstream)
+* This 'flatMapping' method is introduced in java 9 version.
+Output:
+------- Set of phone numbers -------
+9876503021
+9876043210
+9870654321
+9876540021
+9876543001
+9876504321
+9806543021
+9876543010
+9876543200
+9876543201
+9876540321
+9870543201
+9876543210
+9876054321
+9876540201
+9876543021
+----------------------------------------------------------------------------------
+
+12. A Program to show how to use 'filtering' method:
+Program: CollectorsClassProgram12.java
+Notes:
+* Method signature:
+public static <T, A, R> Collector<T, ?, R> filtering(Predicate<? super T> predicate, Collector<? super T, A, R> downstream)
+* This 'filtering' method is introduced in java 9 version.
+Output:
+----- Price greater than 50.00 product list -----
+Product [productId=3, productCode=P003, productName=Bags, quantity=24, price=250.0]
+Product [productId=6, productCode=P006, productName=Bats, quantity=10, price=560.0]
+Product [productId=7, productCode=P007, productName=Box, quantity=45, price=150.0]
+------ Quantity less than 50 product list ------
+Product [productId=1, productCode=P001, productName=Books, quantity=12, price=25.0]
+Product [productId=3, productCode=P003, productName=Bags, quantity=24, price=250.0]
+Product [productId=4, productCode=P004, productName=Balls, quantity=34, price=30.0]
+Product [productId=6, productCode=P006, productName=Bats, quantity=10, price=560.0]
+Product [productId=7, productCode=P007, productName=Box, quantity=45, price=150.0]
+----------------------------------------------------------------------------------
+
+13. A Program to show how to use 'minBy' and 'maxBy' method:
+Program: CollectorsClassProgram13.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, Optional<T>> minBy(Comparator<? super T> comparator)
+public static <T> Collector<T, ?, Optional<T>> maxBy(Comparator<? super T> comparator)
+Output:
+------- Minimum price product --------
+Product [productId=2, productCode=P002, productName=Pencils, quantity=54, price=5.0]
+------- Maximum price product -------
+Product [productId=6, productCode=P006, productName=Bats, quantity=10, price=560.0]
+------- Minimum quantity product ------
+Product [productId=6, productCode=P006, productName=Bats, quantity=10, price=560.0]
+------ Maximum quantity product -------
+Product [productId=5, productCode=P005, productName=Pens, quantity=120, price=15.0]
+----------------------------------------------------------------------------------
+
+14. A Program to show how to use 'collectingAndThen' method:
+Program: CollectorsClassProgram14.java
+Notes:
+* Method signature:
+public static<T,A,R,RR> Collector<T,A,RR> collectingAndThen(Collector<T,A,R> downstream, Function<R,RR> finisher)
+Output:
+---- Minimum price product name ------
+Pencils - 5.0
+------ Maximum price product name ------
+Bats - 560.0
+----------------------------------------------------------------------------------
+
+15. A Program to show how to use 'counting' method:
+Program: CollectorsClassProgram15.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, Long> counting()
+Output:
+----- Total products count ------
+7
+----- Price greater than 50.00 products count -----
+3
