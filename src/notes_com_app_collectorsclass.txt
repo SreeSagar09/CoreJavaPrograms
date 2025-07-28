@@ -381,3 +381,63 @@ Output:
 7
 ----- Price greater than 50.00 products count -----
 3
+----------------------------------------------------------------------------------
+
+16. A Program to show how to use 'summingInt', 'summingLong' and 'summingDouble' method:
+Program: CollectorsClassProgram16.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, Integer> summingInt(ToIntFunction<? super T> mapper)
+public static <T> Collector<T, ?, Long> summingLong(ToLongFunction<? super T> mapper)
+public static <T> Collector<T, ?, Double> summingDouble(ToDoubleFunction<? super T> mapper)
+Output:
+------- Sum of product quantity by summingInt method -------
+299
+------ Sum of product quantity by summingLong method -------
+299
+------ Sum of product price by summingDouble method --------
+1035.0
+----------------------------------------------------------------------------------
+
+17. A Program to show how to use 'averagingInt', 'averagingLong' and 'averagingDouble' method:
+Program: CollectorsClassProgram17.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, Double> averagingInt(ToIntFunction<? super T> mapper)
+public static <T> Collector<T, ?, Double> averagingLong(ToLongFunction<? super T> mapper)
+public static <T> Collector<T, ?, Double> averagingDouble(ToDoubleFunction<? super T> mapper)
+Output:
+------ Average of product quantity by averagingInt method ------
+42.714285714285715
+------ Average of product quantity by averageingLong method -----
+42.714285714285715
+----- Average of product price by averagingDouble method ------
+147.85714285714286
+----------------------------------------------------------------------------------
+
+18. A Program to show how to use 'averagingInt', 'averagingLong' and 'averagingDouble' method:
+Program: CollectorsClassProgram18.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, T> reducing(T identity, BinaryOperator<T> op)
+public static <T> Collector<T, ?, Optional<T>> reducing(BinaryOperator<T> op)
+public static <T, U> Collector<T, ?, U> reducing(U identity, Function<? super T, ? extends U> mapper, BinaryOperator<U> op)
+Output:
+--- Sum of product quantity by reducing[1-argument] method ---
+299
+--- Sum of product quantity by reducing[2-argument] method ---
+299
+--- Sum of product quantity by reducing[3-argument] method ---
+299
+--- Sum of product price by reducing[3-argument] method ---
+1035.0
+----------------------------------------------------------------------------------
+
+19. A Program to show how to use 'averagingInt', 'averagingLong' and 'averagingDouble' method:
+Program: CollectorsClassProgram19.java
+Notes:
+* Method signature:
+public static <T, K> Collector<T, ?, Map<K, List<T>>> groupingBy(Function<? super T, ? extends K> classifier)
+public static <T, K, A, D> Collector<T, ?, Map<K, D>> groupingBy(Function<? super T, ? extends K> classifier, Collector<? super T, A, D> downstream)
+public static <T, K, D, A, M extends Map<K, D>> Collector<T, ?, M> groupingBy(Function<? super T, ? extends K> classifier, Supplier<M> mapFactory, Collector<? super T, A, D> downstream)
+Output:
