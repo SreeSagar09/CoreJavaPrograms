@@ -433,7 +433,7 @@ Output:
 1035.0
 ----------------------------------------------------------------------------------
 
-19. A Program to show how to use 'averagingInt', 'averagingLong' and 'averagingDouble' method:
+19. A Program to show how to use 'groupingBy' method:
 Program: CollectorsClassProgram19.java
 Notes:
 * Method signature:
@@ -441,3 +441,136 @@ public static <T, K> Collector<T, ?, Map<K, List<T>>> groupingBy(Function<? supe
 public static <T, K, A, D> Collector<T, ?, Map<K, D>> groupingBy(Function<? super T, ? extends K> classifier, Collector<? super T, A, D> downstream)
 public static <T, K, D, A, M extends Map<K, D>> Collector<T, ?, M> groupingBy(Function<? super T, ? extends K> classifier, Supplier<M> mapFactory, Collector<? super T, A, D> downstream)
 Output:
+--- Computers grouping by computerName by groupingBy[1-argument] method ---
+ComputerName: Acer
+Computer [computerName=Acer, modelName=Aspire3, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=65000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+ComputerName: Lenovo
+Computer [computerName=Lenovo, modelName=G500, processor=Intel - I3, ram=4Gb, romOrHardDisk=500Gb, price=35000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Lenovo, modelName=ThinkPad, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=45000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+ComputerName: Dell
+Computer [computerName=Dell, modelName=Inspiron, processor=Intel - I7, ram=8Gb, romOrHardDisk=500Gb, price=40000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Dell, modelName=Latitude, processor=Nvidia, ram=8Gb, romOrHardDisk=1Tb, price=65000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+ComputerName: HP
+Computer [computerName=HP, modelName=OmniBook, processor=AMD Ryzen, ram=16Gb, romOrHardDisk=1Tb, price=85000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=HP, modelName=EliteBook, processor=Intel - I7, ram=4Gb, romOrHardDisk=500Gb, price=55000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional.empty]
+--- Computers grouping by computerName by groupingBy[2-argument] method ---
+ComputerName: Acer
+Acer [Aspire3]
+ComputerName: Lenovo
+Lenovo [G500]
+Lenovo [ThinkPad]
+ComputerName: Dell
+Dell [Inspiron]
+Dell [Latitude]
+ComputerName: HP
+HP [OmniBook]
+HP [EliteBook]
+--- Computers grouping by computerName by groupingBy[2-argument] method ---
+Acer --> 1
+Lenovo --> 2
+Dell --> 2
+HP --> 2
+--- Computers grouping by computerName by groupingBy[3-argument] method ---
+ComputerName: Lenovo
+Computer [computerName=Lenovo, modelName=G500, processor=Intel - I3, ram=4Gb, romOrHardDisk=500Gb, price=35000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Lenovo, modelName=ThinkPad, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=45000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+ComputerName: Dell
+Computer [computerName=Dell, modelName=Inspiron, processor=Intel - I7, ram=8Gb, romOrHardDisk=500Gb, price=40000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Dell, modelName=Latitude, processor=Nvidia, ram=8Gb, romOrHardDisk=1Tb, price=65000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+ComputerName: HP
+Computer [computerName=HP, modelName=OmniBook, processor=AMD Ryzen, ram=16Gb, romOrHardDisk=1Tb, price=85000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=HP, modelName=EliteBook, processor=Intel - I7, ram=4Gb, romOrHardDisk=500Gb, price=55000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional.empty]
+ComputerName: Acer
+Computer [computerName=Acer, modelName=Aspire3, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=65000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+--- Computers grouping by computerName by groupingBy[3-argument] method ---
+ComputerName: Acer
+Computer [computerName=Acer, modelName=Aspire3, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=65000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+ComputerName: Dell
+Computer [computerName=Dell, modelName=Inspiron, processor=Intel - I7, ram=8Gb, romOrHardDisk=500Gb, price=40000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Dell, modelName=Latitude, processor=Nvidia, ram=8Gb, romOrHardDisk=1Tb, price=65000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+ComputerName: HP
+Computer [computerName=HP, modelName=OmniBook, processor=AMD Ryzen, ram=16Gb, romOrHardDisk=1Tb, price=85000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=HP, modelName=EliteBook, processor=Intel - I7, ram=4Gb, romOrHardDisk=500Gb, price=55000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional.empty]
+ComputerName: Lenovo
+Computer [computerName=Lenovo, modelName=G500, processor=Intel - I3, ram=4Gb, romOrHardDisk=500Gb, price=35000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Lenovo, modelName=ThinkPad, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=45000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+----------------------------------------------------------------------------------
+
+20. A Program to show how to use 'groupingByConcurrent' method:
+Program: CollectorsClassProgram20.java
+Notes:
+* Method signature:
+public static <T, K> Collector<T, ?, ConcurrentMap<K, List<T>>> groupingByConcurrent(Function<? super T, ? extends K> classifier)
+public static <T, K, A, D> Collector<T, ?, ConcurrentMap<K, D>> groupingByConcurrent(Function<? super T, ? extends K> classifier,  Collector<? super T, A, D> downstream)
+public static <T, K, A, D, M extends ConcurrentMap<K, D>> Collector<T, ?, M> groupingByConcurrent(Function<? super T, ? extends K> classifier, Supplier<M> mapFactory, Collector<? super T, A, D> downstream)
+Output:
+--- Computers grouping by computerName by groupingBy[1-argument] method ---
+ComputerName: Acer
+Computer [computerName=Acer, modelName=Aspire3, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=65000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+ComputerName: Lenovo
+Computer [computerName=Lenovo, modelName=G500, processor=Intel - I3, ram=4Gb, romOrHardDisk=500Gb, price=35000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Lenovo, modelName=ThinkPad, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=45000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+ComputerName: Dell
+Computer [computerName=Dell, modelName=Inspiron, processor=Intel - I7, ram=8Gb, romOrHardDisk=500Gb, price=40000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Dell, modelName=Latitude, processor=Nvidia, ram=8Gb, romOrHardDisk=1Tb, price=65000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+ComputerName: HP
+Computer [computerName=HP, modelName=OmniBook, processor=AMD Ryzen, ram=16Gb, romOrHardDisk=1Tb, price=85000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=HP, modelName=EliteBook, processor=Intel - I7, ram=4Gb, romOrHardDisk=500Gb, price=55000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional.empty]
+--- Computers grouping by computerName by groupingBy[2-argument] method ---
+ComputerName: Lenovo
+Lenovo [G500]
+Lenovo [ThinkPad]
+ComputerName: Acer
+Acer [Aspire3]
+ComputerName: Dell
+Dell [Inspiron]
+Dell [Latitude]
+ComputerName: HP
+HP [OmniBook]
+HP [EliteBook]
+--- Computers grouping by computerName by groupingBy[2-argument] method ---
+Lenovo --> 2
+Acer --> 1
+Dell --> 2
+HP --> 2
+--- Computers grouping by computerName by groupingBy[3-argument] method ---
+ComputerName: Acer
+Computer [computerName=Acer, modelName=Aspire3, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=65000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+ComputerName: Dell
+Computer [computerName=Dell, modelName=Inspiron, processor=Intel - I7, ram=8Gb, romOrHardDisk=500Gb, price=40000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Dell, modelName=Latitude, processor=Nvidia, ram=8Gb, romOrHardDisk=1Tb, price=65000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+ComputerName: HP
+Computer [computerName=HP, modelName=OmniBook, processor=AMD Ryzen, ram=16Gb, romOrHardDisk=1Tb, price=85000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=HP, modelName=EliteBook, processor=Intel - I7, ram=4Gb, romOrHardDisk=500Gb, price=55000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional.empty]
+ComputerName: Lenovo
+Computer [computerName=Lenovo, modelName=G500, processor=Intel - I3, ram=4Gb, romOrHardDisk=500Gb, price=35000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Lenovo, modelName=ThinkPad, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=45000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+----------------------------------------------------------------------------------
+
+21. A Program to show how to use 'partitioningBy' method:
+Program: CollectorsClassProgram21.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, Map<Boolean, List<T>>> partitioningBy(Predicate<? super T> predicate)
+public static <T, D, A> Collector<T, ?, Map<Boolean, D>> partitioningBy(Predicate<? super T> predicate, Collector<? super T, A, D> downstream)
+Output:
+--- Computers partitioning by price by partitioningBy[1-argument] method ---
+Price greater than 55000.00
+Computer [computerName=Dell, modelName=Latitude, processor=Nvidia, ram=8Gb, romOrHardDisk=1Tb, price=65000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=HP, modelName=OmniBook, processor=AMD Ryzen, ram=16Gb, romOrHardDisk=1Tb, price=85000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=HP, modelName=EliteBook, processor=Intel - I7, ram=4Gb, romOrHardDisk=500Gb, price=55000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional.empty]
+Computer [computerName=Acer, modelName=Aspire3, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=65000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+Price less than 55000.00
+Computer [computerName=Lenovo, modelName=G500, processor=Intel - I3, ram=4Gb, romOrHardDisk=500Gb, price=35000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+Computer [computerName=Lenovo, modelName=ThinkPad, processor=Intel - I5, ram=8Gb, romOrHardDisk=500Gb, price=45000.0, romOrHardDiskType=Optional[SSD], graphicCard=Optional.empty]
+Computer [computerName=Dell, modelName=Inspiron, processor=Intel - I7, ram=8Gb, romOrHardDisk=500Gb, price=40000.0, romOrHardDiskType=Optional[HDD], graphicCard=Optional[2Gb-AMD]]
+--- Computers partitioning by price by partitioningBy[2-argument] method ---
+Price greater than 55000.00
+Dell - 65000.0
+HP - 85000.0
+HP - 55000.0
+Acer - 65000.0
+Price less than 55000.00
+Lenovo - 35000.0
+Lenovo - 45000.0
+Dell - 40000.0
