@@ -574,3 +574,254 @@ Price less than 55000.00
 Lenovo - 35000.0
 Lenovo - 45000.0
 Dell - 40000.0
+----------------------------------------------------------------------------------
+
+22. A Program to show how to use 'toUnmodifiableMap' method:
+Program: CollectorsClassProgram22.java
+Notes:
+* Method signature:
+public static <T, K, U> Collector<T, ?, Map<K,U>> toUnmodifiableMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper)
+* This 'toUnmodifiableMap' method return immutable Map object.
+* If we trying to put the value to resulted map it will throw 'java.lang.UnsupportedOperationException'.
+Output:
+----- ProductCode and ProductName unmodifiable map -----
+P001 --> Books
+P002 --> Pencils
+P003 --> Bags
+P004 --> Balls
+P005 --> Pens
+P006 --> Bats
+P007 --> Box
+----- ProductName and Price unmodifiable map -----
+Books --> 25.0
+Bats --> 560.0
+Box --> 150.0
+Balls --> 30.0
+Bags --> 250.0
+Pens --> 15.0
+Pencils --> 5.0
+----------------------------------------------------------------------------------
+
+23. A Program to show how to use 'toUnmodifiableMap' method:
+Program: CollectorsClassProgram23.java
+Notes:
+* Method signature:
+public static <T, K, U> Collector<T, ?, Map<K,U>> toUnmodifiableMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper, BinaryOperator<U> mergeFunction)
+* This 'toUnmodifiableMap' method return immutable Map object.
+* If we trying to put the value to resulted map it will throw 'java.lang.UnsupportedOperationException'.
+Output:
+-------- All Products --------
+P001 - Books - 12 - 25.0
+P002 - Pencils - 54 - 5.0
+P003 - Bags - 24 - 250.0
+P004 - Balls - 34 - 30.0
+P005 - Pens - 120 - 15.0
+P006 - Bats - 10 - 560.0
+P007 - Box - 45 - 150.0
+P008 - Bags - 25 - 300.0
+P009 - Bats - 5 - 500.0
+--- ProductName and Quantity unmodifiable map[if productName is duplicate then first comes quantity as value.] ---
+Books - 12
+Pencils - 54
+Pens - 120
+Bags - 24
+Balls - 34
+Box - 45
+Bats - 10
+--- ProductName and Quantity unmodifiable map[if productName is duplicate then last comes quantity as value.] ---
+Books - 12
+Pencils - 54
+Pens - 120
+Bags - 25
+Balls - 34
+Box - 45
+Bats - 5
+--- ProductName and Quantity unmodifiable map[if productName is duplicate then minimum price as value.] ---
+Books - 25.0
+Pencils - 5.0
+Pens - 15.0
+Bags - 250.0
+Balls - 30.0
+Box - 150.0
+Bats - 500.0
+--- ProductName and Quantity unmodifiable map[if productName is duplicate then maximum price as value.] ---
+Books - 25.0
+Pencils - 5.0
+Pens - 15.0
+Bags - 300.0
+Balls - 30.0
+Box - 150.0
+Bats - 560.0
+----------------------------------------------------------------------------------
+
+24. A Program to show how to use 'toConcurrentMap' method:
+Program: CollectorsClassProgram24.java
+Notes:
+* Method signature:
+public static <T, K, U> Collector<T, ?, ConcurrentMap<K,U>> toConcurrentMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper)
+Output:
+----- ProductCode and ProductName concurrent map -----
+P005 --> Pens
+P004 --> Balls
+P007 --> Box
+P006 --> Bats
+P001 --> Books
+P003 --> Bags
+P002 --> Pencils
+----- ProductName and Price concurrent map -----
+Bats --> 560.0
+Bags --> 250.0
+Box --> 150.0
+Balls --> 30.0
+Books --> 25.0
+Pencils --> 5.0
+Pens --> 15.0
+----------------------------------------------------------------------------------
+
+25. A Program to show how to use 'toConcurrentMap' method:
+Program: CollectorsClassProgram25.java
+Notes:
+* Method signature:
+public static <T, K, U> Collector<T, ?, ConcurrentMap<K,U>> toConcurrentMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper, BinaryOperator<U> mergeFunction)
+Output:
+-------- All Products --------
+P001 - Books - 12 - 25.0
+P002 - Pencils - 54 - 5.0
+P003 - Bags - 24 - 250.0
+P004 - Balls - 34 - 30.0
+P005 - Pens - 120 - 15.0
+P006 - Bats - 10 - 560.0
+P007 - Box - 45 - 150.0
+P008 - Bags - 25 - 300.0
+P009 - Bats - 5 - 500.0
+--- ProductName and Quantity concurrent map[if productName is duplicate then first comes quantity as value.] ---
+Bats - 10
+Bags - 24
+Box - 45
+Balls - 34
+Books - 12
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity concurrent map[if productName is duplicate then last comes quantity as value.] ---
+Bats - 5
+Bags - 25
+Box - 45
+Balls - 34
+Books - 12
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity concurrent map[if productName is duplicate then minimum price as value.] ---
+Bats - 500.0
+Bags - 250.0
+Box - 150.0
+Balls - 30.0
+Books - 25.0
+Pencils - 5.0
+Pens - 15.0
+--- ProductName and Quantity concurrent map[if productName is duplicate then maximum price as value.] ---
+Bats - 560.0
+Bags - 300.0
+Box - 150.0
+Balls - 30.0
+Books - 25.0
+Pencils - 5.0
+Pens - 15.0
+----------------------------------------------------------------------------------
+
+26. A Program to show how to use 'toConcurrentMap' method:
+Program: CollectorsClassProgram26.java
+Notes:
+* Method signature:
+public static <T, K, U, M extends ConcurrentMap<K, U>> Collector<T, ?, M> toConcurrentMap(Function<? super T, ? extends K> keyMapper, Function<? super T, ? extends U> valueMapper, BinaryOperator<U> mergeFunction, Supplier<M> mapFactory)
+Output:
+-------- All Products --------
+P001 - Books - 12 - 25.0
+P002 - Pencils - 54 - 5.0
+P003 - Bags - 24 - 250.0
+P004 - Balls - 34 - 30.0
+P005 - Pens - 120 - 15.0
+P006 - Bats - 10 - 560.0
+P007 - Box - 45 - 150.0
+P008 - Bags - 25 - 300.0
+P009 - Bats - 5 - 500.0
+--- ProductName and Quantity ConcurrentHashMap[if productName is duplicate then minimum quantity as value.] ---
+Bats - 5
+Bags - 24
+Box - 45
+Balls - 34
+Books - 12
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity ConcurrentSkipListMap[if productName is duplicate then maximum quantity as value.] ---
+Bags - 25
+Balls - 34
+Bats - 10
+Books - 12
+Box - 45
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity ConcurrentSkipListMap[if productName is duplicate then first come quantity as value.] ---
+Bags - 24
+Balls - 34
+Bats - 10
+Books - 12
+Box - 45
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity ConcurrentSkipListMap[if productName is duplicate then last come quantity as value.] ---
+Bags - 25
+Balls - 34
+Bats - 5
+Books - 12
+Box - 45
+Pencils - 54
+Pens - 120
+--- ProductName and Quantity ConcurrentSkipListMap[if productName is duplicate then sum of quantity as value.] ---
+Bags - 49
+Balls - 34
+Bats - 15
+Books - 12
+Box - 45
+Pencils - 54
+Pens - 120
+----------------------------------------------------------------------------------
+
+27. A Program to show how to use 'summarizingInt', 'summarizingLong' and 'summarizingDouble' method:
+Program: CollectorsClassProgram27.java
+Notes:
+* Method signature:
+public static <T> Collector<T, ?, IntSummaryStatistics> summarizingInt(ToIntFunction<? super T> mapper)
+public static <T> Collector<T, ?, LongSummaryStatistics> summarizingLong(ToLongFunction<? super T> mapper)
+public static <T> Collector<T, ?, DoubleSummaryStatistics> summarizingDouble(ToDoubleFunction<? super T> mapper)
+Output:
+--- Product quantity summary statistics by summarizingInt method ---
+Count : 7
+Sum : 299
+Average : 42.714285714285715
+Minimum : 10
+Maximum : 120
+--- Product quantity summary statistics by summarizingLong method ---
+Count : 7
+Sum : 299
+Average : 42.714285714285715
+Minimum : 10
+Maximum : 120
+--- Product price summary statistics by summarizingDouble method ---
+Count : 7
+Sum : 1035.0
+Average : 147.85714285714286
+Minimum : 5.0
+Maximum : 560.0
+----------------------------------------------------------------------------------
+
+28. A Program to show how to use 'teeing' method:
+Program: CollectorsClassProgram28.java
+Notes:
+* Method signature:
+public static <T, R1, R2, R> Collector<T, ?, R> teeing(Collector<? super T, ?, R1> downstream1, Collector<? super T, ?, R2> downstream2, BiFunction<? super R1, ? super R2, R> merger)
+Output:
+--- Combining Dell and Lenovo computer list by teeing method ---
+Dell[Inspiron]
+Dell[Latitude]
+Lenovo[G500]
+Lenovo[ThinkPad]
