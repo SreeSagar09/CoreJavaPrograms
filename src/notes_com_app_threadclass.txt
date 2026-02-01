@@ -1,0 +1,143 @@
+1. A Program to show how to create thread by implementing Runnable interface:
+Program: ThreadClassProgram1.java
+Notes:
+* The Runnable interface should be implemented by any class whose instances are intended to be executed by a thread.
+* The Runnable interface is a Functional interface.
+* It has one abstract method that is 'run', and it's method signature is:
+  public abstract void run();
+Output:
+Thread Name: Thread-0, Index: 0
+Thread Name: Thread-1, Index: 0
+Thread Name: Thread-1, Index: 1
+Thread Name: Thread-1, Index: 2
+Thread Name: Thread-1, Index: 3
+Thread Name: Thread-1, Index: 4
+Thread Name: Thread-0, Index: 1
+Thread Name: Thread-0, Index: 2
+Thread Name: Thread-0, Index: 3
+Thread Name: Thread-0, Index: 4
+Thread Name: Thread-0, Index: 5
+Thread Name: Thread-1, Index: 5
+--------------------------------------------------------------------
+
+2. A Program to show how to create thread by extending Thread class:
+Program: ThreadClassProgram2.java
+Notes:
+Output:
+Thread Name: Thread-0, Index: 0
+Thread Name: Thread-1, Index: 0
+Thread Name: Thread-0, Index: 1
+Thread Name: Thread-0, Index: 2
+Thread Name: Thread-1, Index: 1
+Thread Name: Thread-0, Index: 3
+Thread Name: Thread-0, Index: 4
+Thread Name: Thread-0, Index: 5
+Thread Name: Thread-1, Index: 2
+Thread Name: Thread-1, Index: 3
+Thread Name: Thread-1, Index: 4
+Thread Name: Thread-1, Index: 5
+--------------------------------------------------------------------
+
+3. A Program to show how to create thread by Runnable interface:
+Program: ThreadClassProgram3.java
+Notes:
+Output:
+Thread Name: Thread-1, Index: 0
+Thread Name: Thread-1, Index: 1
+Thread Name: Thread-1, Index: 2
+Thread Name: Thread-1, Index: 3
+Thread Name: Thread-1, Index: 4
+Thread Name: Thread-1, Index: 5
+Thread Name: Thread-0, Index: 0
+Thread Name: Thread-0, Index: 1
+Thread Name: Thread-0, Index: 2
+Thread Name: Thread-0, Index: 3
+Thread Name: Thread-0, Index: 4
+Thread Name: Thread-0, Index: 5
+Thread Name: Thread-2, Index: 0
+Thread Name: Thread-2, Index: 1
+Thread Name: Thread-2, Index: 2
+Thread Name: Thread-2, Index: 3
+Thread Name: Thread-2, Index: 4
+Thread Name: Thread-2, Index: 5
+--------------------------------------------------------------------
+
+4. A Program to show how to work with sleep method:
+Program: ThreadClassProgram4.java
+Notes:
+* The 'sleep' method is used to sleep currently executing thread, Thread class has two overloaded sleep methods.
+* The method signature of the 'sleep' methods are:
+  public static native void sleep(long millis) throws InterruptedException;
+  public static void sleep(long millis, int nanos) throws InterruptedException;
+Output:
+Thread Name: Thread-1, Index: 0, Timestamp: 31-01-2026 11:00:16 265
+Thread Name: Thread-0, Index: 0, Timestamp: 31-01-2026 11:00:16 765
+Thread Name: Thread-1, Index: 1, Timestamp: 31-01-2026 11:00:16 771
+Thread Name: Thread-1, Index: 2, Timestamp: 31-01-2026 11:00:17 273
+Thread Name: Thread-0, Index: 1, Timestamp: 31-01-2026 11:00:17 767
+Thread Name: Thread-1, Index: 3, Timestamp: 31-01-2026 11:00:17 774
+Thread Name: Thread-1, Index: 4, Timestamp: 31-01-2026 11:00:18 276
+Thread Name: Thread-0, Index: 2, Timestamp: 31-01-2026 11:00:18 768
+Thread Name: Thread-1, Index: 5, Timestamp: 31-01-2026 11:00:18 778
+Thread Name: Thread-0, Index: 3, Timestamp: 31-01-2026 11:00:19 768
+Thread Name: Thread-0, Index: 4, Timestamp: 31-01-2026 11:00:20 769
+Thread Name: Thread-0, Index: 5, Timestamp: 31-01-2026 11:00:21 769
+--------------------------------------------------------------------
+
+5. A Program to show how to work with join method:
+Program: ThreadClassProgram5.java
+Notes:
+* The 'join' method is used to wait all threads until join method call thread to die.
+* There are three overloaded 'join' method, those method signatures are:
+  public final synchronized void join(final long millis) throws InterruptedException;
+  public final synchronized void join(long millis, int nanos) throws InterruptedException;
+  public final void join() throws InterruptedException;
+* If we call join method with no arguments or with zeros on a thread, remaining all threads will wait until join method call thread to die.
+* If we call join method with no arguments or with zeros on main thread will lock the main thread, Eg: Thread.currentThread().join() or Thread.currentThread().join(0) or Thread.currentThread().join(0, 0) 
+* If we call join method with arguments on a thread, remaining all threads will wait until given time.
+Output:
+Thread Name: Thread-0, Index: 0, Timestamp: 31-01-2026 12:42:32 774
+Thread Name: Thread-0, Index: 1, Timestamp: 31-01-2026 12:42:33 776
+Thread Name: Thread-0, Index: 2, Timestamp: 31-01-2026 12:42:34 778
+Thread Name: Thread-0, Index: 3, Timestamp: 31-01-2026 12:42:35 779
+Thread Name: Thread-0, Index: 4, Timestamp: 31-01-2026 12:42:36 780
+Thread Name: Thread-0, Index: 5, Timestamp: 31-01-2026 12:42:37 781
+Thread Name: Thread-1, Index: 0, Timestamp: 31-01-2026 12:42:38 784
+Thread Name: Thread-1, Index: 1, Timestamp: 31-01-2026 12:42:39 786
+Thread Name: Thread-1, Index: 2, Timestamp: 31-01-2026 12:42:40 789
+Thread Name: Thread-1, Index: 3, Timestamp: 31-01-2026 12:42:41 790
+Thread Name: Thread-2, Index: 0, Timestamp: 31-01-2026 12:42:42 284
+Thread Name: Thread-1, Index: 4, Timestamp: 31-01-2026 12:42:42 791
+Thread Name: Thread-2, Index: 1, Timestamp: 31-01-2026 12:42:43 785
+Thread Name: Thread-1, Index: 5, Timestamp: 31-01-2026 12:42:43 792
+Thread Name: Thread-2, Index: 2, Timestamp: 31-01-2026 12:42:45 285
+Thread Name: Thread-2, Index: 3, Timestamp: 31-01-2026 12:42:46 786
+Thread Name: Thread-2, Index: 4, Timestamp: 31-01-2026 12:42:48 287
+Thread Name: Thread-2, Index: 5, Timestamp: 31-01-2026 12:42:49 789
+--------------------------------------------------------------------
+
+6. A Program to show how to work with yield method:
+Program: ThreadClassProgram5.java
+Notes:
+* It gives hint to the scheduler that the current thread is willing to yield its current use of a processor.
+* The method signature of 'yield' method is:
+  public static native void yield();
+Output:
+Thread Name: Thread-1, Index: 0, Timestamp: 01-02-2026 02:36:57 444
+Thread Name: Thread-1, Index: 1, Timestamp: 01-02-2026 02:36:57 450
+Thread Name: Thread-1, Index: 2, Timestamp: 01-02-2026 02:36:57 450
+Thread Name: Thread-1, Index: 3, Timestamp: 01-02-2026 02:36:57 453
+Thread Name: Thread-1, Index: 4, Timestamp: 01-02-2026 02:36:57 459
+Thread Name: Thread-1, Index: 5, Timestamp: 01-02-2026 02:36:57 460
+Thread Name: Thread-0, Index: 0, Timestamp: 01-02-2026 02:36:57 462
+Thread Name: Thread-2, Index: 0, Timestamp: 01-02-2026 02:36:57 448
+Thread Name: Thread-2, Index: 1, Timestamp: 01-02-2026 02:36:57 463
+Thread Name: Thread-2, Index: 2, Timestamp: 01-02-2026 02:36:57 463
+Thread Name: Thread-0, Index: 1, Timestamp: 01-02-2026 02:36:57 464
+Thread Name: Thread-2, Index: 3, Timestamp: 01-02-2026 02:36:57 464
+Thread Name: Thread-2, Index: 4, Timestamp: 01-02-2026 02:36:57 465
+Thread Name: Thread-2, Index: 5, Timestamp: 01-02-2026 02:36:57 465
+Thread Name: Thread-0, Index: 2, Timestamp: 01-02-2026 02:36:57 467
+Thread Name: Thread-0, Index: 3, Timestamp: 01-02-2026 02:36:57 468
+Thread Name: Thread-0, Index: 4, Timestamp: 01-02-2026 02:36:57 469
+Thread Name: Thread-0, Index: 5, Timestamp: 01-02-2026 02:36:57 471
