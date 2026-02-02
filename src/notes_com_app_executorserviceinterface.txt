@@ -1,7 +1,7 @@
 1. A Program to show use of execute method in Executor interface:
 Program: ExecutorServiceInterfaceProgram1.java
 Notes:
-* To execute given runnable task.
+* This method is used to execute given runnable task.
 * The method signature of 'execute' method is:
   void execute(Runnable command);
 Output:
@@ -17,3 +17,310 @@ Thread Name: pool-1-thread-1, Index: 2
 Thread Name: pool-1-thread-1, Index: 3
 Thread Name: pool-1-thread-1, Index: 4
 Thread Name: pool-1-thread-1, Index: 5
+---------------------------------------------------------------
+
+2. A Program to show use of submit method in ExecutorService interface:
+Program: ExecutorServiceInterfaceProgram2.java
+Notes:
+* This method is used to execute callable task, and return Future, The Future's get method will return task value after successful completion of task.
+* The method signature of 'submit' method is:
+  <T> Future<T> submit(Callable<T> task);
+Output:
+Thread Name: pool-1-thread-2, Current Total: 0
+Thread Name: pool-1-thread-1, Current Total: 0
+Thread Name: pool-1-thread-1, Current Total: 1
+Thread Name: pool-1-thread-1, Current Total: 3
+Thread Name: pool-1-thread-1, Current Total: 6
+Thread Name: pool-1-thread-1, Current Total: 10
+Thread Name: pool-1-thread-1, Current Total: 15
+Thread Name: pool-1-thread-1, Current Total: 21
+Thread Name: pool-1-thread-1, Current Total: 28
+Thread Name: pool-1-thread-1, Current Total: 36
+Thread Name: pool-1-thread-1, Current Total: 45
+Thread Name: pool-1-thread-1, Current Total: 55
+Thread Name: pool-1-thread-2, Current Total: 1
+Thread Name: pool-1-thread-2, Current Total: 3
+Total Value: 55
+Thread Name: pool-1-thread-2, Current Total: 6
+Thread Name: pool-1-thread-2, Current Total: 10
+Thread Name: pool-1-thread-2, Current Total: 15
+Thread Name: pool-1-thread-2, Current Total: 21
+Thread Name: pool-1-thread-2, Current Total: 28
+Thread Name: pool-1-thread-2, Current Total: 36
+Thread Name: pool-1-thread-2, Current Total: 45
+Thread Name: pool-1-thread-2, Current Total: 55
+Thread Name: pool-1-thread-2, Current Total: 66
+Thread Name: pool-1-thread-2, Current Total: 78
+Thread Name: pool-1-thread-2, Current Total: 91
+Thread Name: pool-1-thread-2, Current Total: 105
+Thread Name: pool-1-thread-2, Current Total: 120
+Total Value: 120
+---------------------------------------------------------------
+
+3. A Program to show use of submit method in ExecutorService interface:
+Program: ExecutorServiceInterfaceProgram3.java
+Notes:
+* This method is used to execute runnable task, and return Future, The Future's get method will return given result value after successful completion of task.
+* The method signature of 'submit' method is:
+  <T> Future<T> submit(Runnable task, T result);
+Output:
+Thread Name: pool-1-thread-1, Index: 0
+Thread Name: pool-1-thread-2, Index: 0
+Thread Name: pool-1-thread-2, Index: 1
+Thread Name: pool-1-thread-2, Index: 2
+Thread Name: pool-1-thread-2, Index: 3
+Thread Name: pool-1-thread-1, Index: 1
+Thread Name: pool-1-thread-2, Index: 4
+Thread Name: pool-1-thread-2, Index: 5
+Thread Name: pool-1-thread-1, Index: 2
+Thread Name: pool-1-thread-1, Index: 3
+Thread Name: pool-1-thread-1, Index: 4
+Thread Name: pool-1-thread-1, Index: 5
+Task-1 completed
+Task-2 completed
+---------------------------------------------------------------
+
+4. A Program to show use of submit method in ExecutorService interface:
+Program: ExecutorServiceInterfaceProgram4.java
+Notes:
+* This method is used to execute runnable task, and return Future, The Future's get method will return null after successful completion of task.
+* The method signature of 'submit' method is:
+  Future<?> submit(Runnable task);
+Output:
+Thread Name: pool-1-thread-2, Index: 0
+Thread Name: pool-1-thread-1, Index: 0
+Thread Name: pool-1-thread-2, Index: 1
+Thread Name: pool-1-thread-1, Index: 1
+Thread Name: pool-1-thread-1, Index: 2
+Thread Name: pool-1-thread-1, Index: 3
+Thread Name: pool-1-thread-1, Index: 4
+Thread Name: pool-1-thread-1, Index: 5
+Thread Name: pool-1-thread-2, Index: 2
+Thread Name: pool-1-thread-2, Index: 3
+null
+Thread Name: pool-1-thread-2, Index: 4
+Thread Name: pool-1-thread-2, Index: 5
+null
+---------------------------------------------------------------
+
+5. A Program to show use of invokeAll method in ExecutorService interface:
+Program: ExecutorServiceInterfaceProgram5.java
+Notes:
+* This method is used to execute collection of callable task, and return list of Future's, The list of future will return after successful completion of collection of tasks.
+* The method signature of 'invokeAll' method is:
+  <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks) throws InterruptedException;
+Output:
+Thread Name: pool-1-thread-1, Current Total: 0
+Thread Name: pool-1-thread-4, Current Total: 0
+Thread Name: pool-1-thread-3, Current Total: 0
+Thread Name: pool-1-thread-2, Current Total: 0
+Thread Name: pool-1-thread-3, Current Total: 1
+Thread Name: pool-1-thread-3, Current Total: 3
+Thread Name: pool-1-thread-3, Current Total: 6
+Thread Name: pool-1-thread-4, Current Total: 1
+Thread Name: pool-1-thread-3, Current Total: 10
+Thread Name: pool-1-thread-1, Current Total: 1
+Thread Name: pool-1-thread-1, Current Total: 3
+Thread Name: pool-1-thread-1, Current Total: 6
+Thread Name: pool-1-thread-1, Current Total: 10
+Thread Name: pool-1-thread-1, Current Total: 15
+Thread Name: pool-1-thread-3, Current Total: 15
+Thread Name: pool-1-thread-3, Current Total: 21
+Thread Name: pool-1-thread-3, Current Total: 28
+Thread Name: pool-1-thread-3, Current Total: 36
+Thread Name: pool-1-thread-3, Current Total: 45
+Thread Name: pool-1-thread-3, Current Total: 55
+Thread Name: pool-1-thread-3, Current Total: 66
+Thread Name: pool-1-thread-3, Current Total: 78
+Thread Name: pool-1-thread-3, Current Total: 91
+Thread Name: pool-1-thread-3, Current Total: 105
+Thread Name: pool-1-thread-3, Current Total: 120
+Thread Name: pool-1-thread-4, Current Total: 3
+Thread Name: pool-1-thread-4, Current Total: 6
+Thread Name: pool-1-thread-4, Current Total: 10
+Thread Name: pool-1-thread-4, Current Total: 15
+Thread Name: pool-1-thread-4, Current Total: 21
+Thread Name: pool-1-thread-4, Current Total: 28
+Thread Name: pool-1-thread-4, Current Total: 36
+Thread Name: pool-1-thread-4, Current Total: 45
+Thread Name: pool-1-thread-4, Current Total: 55
+Thread Name: pool-1-thread-4, Current Total: 66
+Thread Name: pool-1-thread-4, Current Total: 78
+Thread Name: pool-1-thread-4, Current Total: 91
+Thread Name: pool-1-thread-4, Current Total: 105
+Thread Name: pool-1-thread-4, Current Total: 120
+Thread Name: pool-1-thread-4, Current Total: 136
+Thread Name: pool-1-thread-4, Current Total: 153
+Thread Name: pool-1-thread-4, Current Total: 171
+Thread Name: pool-1-thread-4, Current Total: 190
+Thread Name: pool-1-thread-4, Current Total: 210
+Thread Name: pool-1-thread-2, Current Total: 1
+Thread Name: pool-1-thread-2, Current Total: 3
+Thread Name: pool-1-thread-2, Current Total: 6
+Thread Name: pool-1-thread-2, Current Total: 10
+Thread Name: pool-1-thread-2, Current Total: 15
+Thread Name: pool-1-thread-2, Current Total: 21
+Thread Name: pool-1-thread-2, Current Total: 28
+Thread Name: pool-1-thread-2, Current Total: 36
+Thread Name: pool-1-thread-2, Current Total: 45
+Thread Name: pool-1-thread-2, Current Total: 55
+Task-1 result: 15, Future Status: true
+Task-2 result: 55, Future Status: true
+Task-3 result: 120, Future Status: true
+Task-4 result: 210, Future Status: true
+---------------------------------------------------------------
+
+6. A Program to show use of invokeAll method in ExecutorService interface:
+Program: ExecutorServiceInterfaceProgram6.java
+Notes:
+* This method is used to execute collection of callable task with in the timeout period or expires the tasks, and return list of Future's, The list of completed future will return or throw exception.
+* The method signature of 'invokeAll' method is:
+  <T> List<Future<T>> invokeAll(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit unit) throws InterruptedException;
+Output:
+Thread Name: pool-1-thread-1, Current Total: 0
+Thread Name: pool-1-thread-2, Current Total: 0
+Thread Name: pool-1-thread-2, Current Total: 1
+Thread Name: pool-1-thread-2, Current Total: 3
+Thread Name: pool-1-thread-1, Current Total: 1
+Thread Name: pool-1-thread-1, Current Total: 3
+Thread Name: pool-1-thread-1, Current Total: 6
+Thread Name: pool-1-thread-1, Current Total: 10
+Thread Name: pool-1-thread-1, Current Total: 15
+Thread Name: pool-1-thread-2, Current Total: 6
+Thread Name: pool-1-thread-2, Current Total: 10
+Thread Name: pool-1-thread-2, Current Total: 15
+Thread Name: pool-1-thread-2, Current Total: 21
+Thread Name: pool-1-thread-2, Current Total: 28
+Thread Name: pool-1-thread-2, Current Total: 36
+Thread Name: pool-1-thread-2, Current Total: 45
+Thread Name: pool-1-thread-2, Current Total: 55
+Thread Name: pool-1-thread-3, Current Total: 0
+Thread Name: pool-1-thread-3, Current Total: 1
+Thread Name: pool-1-thread-3, Current Total: 3
+Thread Name: pool-1-thread-3, Current Total: 6
+Thread Name: pool-1-thread-3, Current Total: 10
+Thread Name: pool-1-thread-3, Current Total: 15
+Thread Name: pool-1-thread-3, Current Total: 21
+Thread Name: pool-1-thread-4, Current Total: 0
+Thread Name: pool-1-thread-4, Current Total: 1
+Thread Name: pool-1-thread-4, Current Total: 3
+Thread Name: pool-1-thread-4, Current Total: 6
+Thread Name: pool-1-thread-4, Current Total: 10
+Thread Name: pool-1-thread-4, Current Total: 15
+Thread Name: pool-1-thread-4, Current Total: 21
+Thread Name: pool-1-thread-4, Current Total: 28
+Thread Name: pool-1-thread-4, Current Total: 36
+Thread Name: pool-1-thread-4, Current Total: 45
+Thread Name: pool-1-thread-4, Current Total: 55
+Thread Name: pool-1-thread-4, Current Total: 66
+Thread Name: pool-1-thread-4, Current Total: 78
+Thread Name: pool-1-thread-4, Current Total: 91
+Thread Name: pool-1-thread-4, Current Total: 105
+Thread Name: pool-1-thread-4, Current Total: 120
+Thread Name: pool-1-thread-4, Current Total: 136
+Thread Name: pool-1-thread-4, Current Total: 153
+Thread Name: pool-1-thread-4, Current Total: 171
+Thread Name: pool-1-thread-4, Current Total: 190
+Thread Name: pool-1-thread-4, Current Total: 210
+Thread Name: pool-1-thread-3, Current Total: 28
+Thread Name: pool-1-thread-3, Current Total: 36
+Thread Name: pool-1-thread-3, Current Total: 45
+Thread Name: pool-1-thread-3, Current Total: 55
+Thread Name: pool-1-thread-3, Current Total: 66
+Thread Name: pool-1-thread-3, Current Total: 78
+Thread Name: pool-1-thread-3, Current Total: 91
+Thread Name: pool-1-thread-3, Current Total: 105
+Thread Name: pool-1-thread-3, Current Total: 120
+Task-1 result: 15, Future Status: true
+Task-2 result: 55, Future Status: true
+Task-3 result: 120, Future Status: true
+Task-4 result: 210, Future Status: true
+---------------------------------------------------------------
+
+7. A Program to show use of invokeAny method in ExecutorService interface:
+Program: ExecutorServiceInterfaceProgram7.java
+Notes:
+* The method signature of 'invokeAny' method is:
+  <T> T invokeAny(Collection<? extends Callable<T>> tasks) throws InterruptedException, ExecutionException;
+Output:
+Thread Name: pool-1-thread-1, Current Total: 0
+Thread Name: pool-1-thread-1, Current Total: 1
+Thread Name: pool-1-thread-1, Current Total: 3
+Thread Name: pool-1-thread-1, Current Total: 6
+Thread Name: pool-1-thread-1, Current Total: 10
+Thread Name: pool-1-thread-1, Current Total: 15
+Thread Name: pool-1-thread-2, Current Total: 0
+Thread Name: pool-1-thread-2, Current Total: 1
+Task Value: Task-1 result: 15
+Thread Name: pool-1-thread-2, Current Total: 3
+Thread Name: pool-1-thread-2, Current Total: 6
+Thread Name: pool-1-thread-2, Current Total: 10
+Thread Name: pool-1-thread-2, Current Total: 15
+Thread Name: pool-1-thread-2, Current Total: 21
+Thread Name: pool-1-thread-2, Current Total: 28
+Thread Name: pool-1-thread-2, Current Total: 36
+Thread Name: pool-1-thread-2, Current Total: 45
+Thread Name: pool-1-thread-2, Current Total: 55
+---------------------------------------------------------------
+
+8. A Program to show use of invokeAny method in ExecutorService interface:
+Program: ExecutorServiceInterfaceProgram8.java
+Notes:
+* The method signature of 'invokeAll' method is:
+  <T> T invokeAny(Collection<? extends Callable<T>> tasks, long timeout, TimeUnit unit)
+Output:
+Thread Name: pool-1-thread-2, Current Total: 0
+Thread Name: pool-1-thread-1, Current Total: 0
+Thread Name: pool-1-thread-1, Current Total: 1
+Thread Name: pool-1-thread-1, Current Total: 3
+Thread Name: pool-1-thread-1, Current Total: 6
+Thread Name: pool-1-thread-1, Current Total: 10
+Thread Name: pool-1-thread-1, Current Total: 15
+Thread Name: pool-1-thread-4, Current Total: 0
+Thread Name: pool-1-thread-4, Current Total: 1
+Thread Name: pool-1-thread-4, Current Total: 3
+Task Value: Task-1 result: 15
+Thread Name: pool-1-thread-4, Current Total: 6
+Thread Name: pool-1-thread-4, Current Total: 10
+Thread Name: pool-1-thread-4, Current Total: 15
+Thread Name: pool-1-thread-4, Current Total: 21
+Thread Name: pool-1-thread-4, Current Total: 28
+Thread Name: pool-1-thread-4, Current Total: 36
+Thread Name: pool-1-thread-3, Current Total: 0
+Thread Name: pool-1-thread-3, Current Total: 1
+Thread Name: pool-1-thread-3, Current Total: 3
+Thread Name: pool-1-thread-3, Current Total: 6
+Thread Name: pool-1-thread-3, Current Total: 10
+Thread Name: pool-1-thread-3, Current Total: 15
+Thread Name: pool-1-thread-3, Current Total: 21
+Thread Name: pool-1-thread-3, Current Total: 28
+Thread Name: pool-1-thread-3, Current Total: 36
+Thread Name: pool-1-thread-3, Current Total: 45
+Thread Name: pool-1-thread-3, Current Total: 55
+Thread Name: pool-1-thread-3, Current Total: 66
+Thread Name: pool-1-thread-3, Current Total: 78
+Thread Name: pool-1-thread-3, Current Total: 91
+Thread Name: pool-1-thread-4, Current Total: 45
+Thread Name: pool-1-thread-3, Current Total: 105
+Thread Name: pool-1-thread-2, Current Total: 1
+Thread Name: pool-1-thread-3, Current Total: 120
+Thread Name: pool-1-thread-4, Current Total: 55
+Thread Name: pool-1-thread-4, Current Total: 66
+Thread Name: pool-1-thread-4, Current Total: 78
+Thread Name: pool-1-thread-4, Current Total: 91
+Thread Name: pool-1-thread-4, Current Total: 105
+Thread Name: pool-1-thread-4, Current Total: 120
+Thread Name: pool-1-thread-4, Current Total: 136
+Thread Name: pool-1-thread-4, Current Total: 153
+Thread Name: pool-1-thread-4, Current Total: 171
+Thread Name: pool-1-thread-4, Current Total: 190
+Thread Name: pool-1-thread-4, Current Total: 210
+Thread Name: pool-1-thread-2, Current Total: 3
+Thread Name: pool-1-thread-2, Current Total: 6
+Thread Name: pool-1-thread-2, Current Total: 10
+Thread Name: pool-1-thread-2, Current Total: 15
+Thread Name: pool-1-thread-2, Current Total: 21
+Thread Name: pool-1-thread-2, Current Total: 28
+Thread Name: pool-1-thread-2, Current Total: 36
+Thread Name: pool-1-thread-2, Current Total: 45
+Thread Name: pool-1-thread-2, Current Total: 55
