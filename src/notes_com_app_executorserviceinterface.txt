@@ -1,4 +1,4 @@
-1. A Program to show use of execute method in Executor interface:
+1. A Program to show use of execute method of the Executor interface:
 Program: ExecutorServiceInterfaceProgram1.java
 Notes:
 * This method is used to execute given runnable task.
@@ -19,7 +19,7 @@ Thread Name: pool-1-thread-1, Index: 4
 Thread Name: pool-1-thread-1, Index: 5
 ---------------------------------------------------------------
 
-2. A Program to show use of submit method in ExecutorService interface:
+2. A Program to show use of submit method of the ExecutorService interface:
 Program: ExecutorServiceInterfaceProgram2.java
 Notes:
 * This method is used to execute callable task, and return Future, The Future's get method will return task value after successful completion of task.
@@ -57,7 +57,7 @@ Thread Name: pool-1-thread-2, Current Total: 120
 Total Value: 120
 ---------------------------------------------------------------
 
-3. A Program to show use of submit method in ExecutorService interface:
+3. A Program to show use of submit method of the ExecutorService interface:
 Program: ExecutorServiceInterfaceProgram3.java
 Notes:
 * This method is used to execute runnable task, and return Future, The Future's get method will return given result value after successful completion of task.
@@ -80,7 +80,7 @@ Task-1 completed
 Task-2 completed
 ---------------------------------------------------------------
 
-4. A Program to show use of submit method in ExecutorService interface:
+4. A Program to show use of submit method of the ExecutorService interface:
 Program: ExecutorServiceInterfaceProgram4.java
 Notes:
 * This method is used to execute runnable task, and return Future, The Future's get method will return null after successful completion of task.
@@ -103,7 +103,7 @@ Thread Name: pool-1-thread-2, Index: 5
 null
 ---------------------------------------------------------------
 
-5. A Program to show use of invokeAll method in ExecutorService interface:
+5. A Program to show use of invokeAll method of the ExecutorService interface:
 Program: ExecutorServiceInterfaceProgram5.java
 Notes:
 * This method is used to execute collection of callable task, and return list of Future's, The list of future will return after successful completion of collection of tasks.
@@ -170,7 +170,7 @@ Task-3 result: 120, Future Status: true
 Task-4 result: 210, Future Status: true
 ---------------------------------------------------------------
 
-6. A Program to show use of invokeAll method in ExecutorService interface:
+6. A Program to show use of invokeAll method of the ExecutorService interface:
 Program: ExecutorServiceInterfaceProgram6.java
 Notes:
 * This method is used to execute collection of callable task with in the timeout period or expires the tasks, and return list of Future's, The list of completed future will return or throw exception.
@@ -237,7 +237,7 @@ Task-3 result: 120, Future Status: true
 Task-4 result: 210, Future Status: true
 ---------------------------------------------------------------
 
-7. A Program to show use of invokeAny method in ExecutorService interface:
+7. A Program to show use of invokeAny method of the ExecutorService interface:
 Program: ExecutorServiceInterfaceProgram7.java
 Notes:
 * The method signature of 'invokeAny' method is:
@@ -263,7 +263,7 @@ Thread Name: pool-1-thread-2, Current Total: 45
 Thread Name: pool-1-thread-2, Current Total: 55
 ---------------------------------------------------------------
 
-8. A Program to show use of invokeAny method in ExecutorService interface:
+8. A Program to show use of invokeAny method of the ExecutorService interface:
 Program: ExecutorServiceInterfaceProgram8.java
 Notes:
 * The method signature of 'invokeAll' method is:
