@@ -1,0 +1,112 @@
+1. A Program to show use of 'getInstance' all overloaded methods:
+Program: CalendarClassProgram1.java
+Notes:
+* The 'getInstance' method is used to get the Calendar class instance.
+* Method signature of getInstance methods
+	public static Calendar getInstance();
+	public static Calendar getInstance(Locale aLocale);
+	public static Calendar getInstance(TimeZone zone);
+	public static Calendar getInstance(TimeZone zone, Locale aLocale);
+Output:
+Date: 2026-Apr-23 21:54:12 IST
+Date: 2026-Apr-23 21:54:12 IST
+Date: 2026-Apr-24 02:24:13 AEST
+Date: 2026-Apr-23 12:24:13 GMT-04:00
+--------------------------------------------------------------------
+
+2. A Program to show use of 'setTime', 'getTime' methods:
+Program: CalendarClassProgram2.java
+Notes:
+* The 'setTime' method is used set date to the Calendar.
+* Method signature of 'setTime' method.
+	public final void setTime(Date date);
+* This 'setTime' method internally uses 'public void setTimeInMillis(long millis)' method.
+* The 'getTime' method is used to get Calendar date.
+* Method signature of 'getTime' method.
+	public final Date getTime();
+* This 'getTime' method internally uses 'public Date(long date)'.
+Output:
+Date: Mon Nov 30 23:00:05 IST 2026
+Date: Thu Apr 23 21:55:09 IST 2026
+--------------------------------------------------------------------
+
+3. A Program to show use of 'getTimeInMillis', 'setTimeInMillis' methods:
+Program: CalendarClassProgram3.java
+Notes:
+* Method signature of 'getTimeInMillis' method is:
+	public long getTimeInMillis();
+* Method signature of 'setTimeInMillis' method is:
+	public void setTimeInMillis(long millis);
+Output:
+Time in millis: 1776964648789
+Millis in Date format: 2026-04-23 22:43:33
+--------------------------------------------------------------------
+
+4. A Program to show use of 'get' method:
+Program: CalendarClassProgram4.java
+Notes:
+* Method signature of 'get' method is:
+	 public int get(int field);
+Output:
+Date: Sat Apr 25 09:23:40 IST 2026
+Date value: 25
+Day of month value: 25
+Day of week value: 7
+Day of year value: 115
+Month value: 3
+Era value: 1
+Hour value: 9
+Hour of day value: 9
+Second value: 40
+Minute value: 23
+Millisecond value: 739
+Week of month value: 4
+Week of year value: 17
+Year value: 2026
+--------------------------------------------------------------------
+
+5. A Program to show use of 'set' method:
+Program: CalendarClassProgram5.java
+Notes:
+* Method signature of 'set' method is:
+	 public void set(int field, int value);
+Output:
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting date to 2, then date is: Thu Apr 02 10:17:56 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting day of month to 2, then date is: Thu Apr 02 10:17:56 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting day of week to 2, then date is: Mon Apr 20 10:17:56 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting day of year to 2, then date is: Fri Jan 02 10:17:56 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting month to 13, then date is: Thu Feb 25 10:17:56 IST 2027
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting hour to 5, then date is: Sat Apr 25 05:17:56 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting hour of day to 15, then date is: Sat Apr 25 15:17:56 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting minute to 55, then date is: Sat Apr 25 10:55:56 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting second to 55, then date is: Sat Apr 25 10:17:55 IST 2026
+Date: Sat Apr 25 10:17:56 IST 2026
+Setting year to 10, then date is: Thu Apr 25 10:17:56 IST 2030
+--------------------------------------------------------------------
+
+6. A Program to show use of 'set' all overloaded methods:
+Program: CalendarClassProgram6.java
+Notes:
+* Method signature of 'set' method is:
+	 public void set(int field, int value);
+	 public final void set(int year, int month, int date);
+	 public final void set(int year, int month, int date, int hourOfDay, int minute);
+	 public final void set(int year, int month, int date, int hourOfDay, int minute, int second)
+Output:
+Date: Sat Apr 25 10:47:46 IST 2026
+Setting month to 10, then date is: Wed Nov 25 10:47:46 IST 2026
+Date: Sat Apr 25 10:47:46 IST 2026
+Setting year to 2035, month to 1 and date to 28, then date is: Mon Feb 26 10:47:46 IST 2035
+Date: Sat Apr 25 10:47:46 IST 2026
+Setting year to 2020, month to 0, date to 1, hour to 10 and miniute to 30, then date is: Wed Jan 01 10:30:46 IST 2020
+Date: Sat Apr 25 10:47:46 IST 2026
+Setting year to 2029, month to 10, date to 1, hour to 16, miniute to 55 and second to 55, then date is: Thu Nov 01 16:55:55 IST 2029
