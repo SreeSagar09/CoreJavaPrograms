@@ -1,0 +1,57 @@
+1. A Program to show use of 'supplyAsync' all overloaded methods:
+Program: CompletableFutureClassProgram1.java
+Notes:
+* The 'supplyAsync' method is used to execute a task asynchronously in another thread and get a result back later.
+* The method signature of the 'supplyAsync' methods are:
+  public static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier);
+  public static <U> CompletableFuture<U> supplyAsync(Supplier<U> supplier, Executor executor);
+Output:
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 0
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 1
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 2
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 3
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 4
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 5
+Thread Name: pool-1-thread-1, Index: 0
+Thread Name: pool-1-thread-1, Index: 1
+Thread Name: pool-1-thread-1, Index: 2
+Thread Name: pool-1-thread-1, Index: 3
+Thread Name: pool-1-thread-1, Index: 4
+Thread Name: pool-1-thread-1, Index: 5
+Sum: 15
+Sum2: 15
+-------------------------------------------------------------------
+
+2. A Program to show use of 'runAsync' all overloaded methods:
+Program: CompletableFutureClassProgram2.java
+Notes:
+* The 'runAsync' method is used to execute a task asynchronously in another thread.
+* The method signature of the 'runAsync' methods are:
+  public static CompletableFuture<Void> runAsync(Runnable runnable);
+  public static CompletableFuture<Void> runAsync(Runnable runnable, Executor executor);
+Output:
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 0
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 1
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 2
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 3
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 4
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 5
+Thread Name: pool-1-thread-1, Index: 0
+Thread Name: pool-1-thread-1, Index: 1
+Thread Name: pool-1-thread-1, Index: 2
+Thread Name: pool-1-thread-1, Index: 3
+Thread Name: pool-1-thread-1, Index: 4
+Thread Name: pool-1-thread-1, Index: 5
+Value: null
+Value2: null
+----------------------------------------------------------------------
+
+3. A Program to show use of 'completedFuture' method:
+Program: CompletableFutureClassProgram3.java
+Notes:
+* The 'completedFuture' method returns a new CompletableFuture that is already finished and holds a specified static value.
+* It is used when you need to feed a pre-computed or fallback value into an asynchronous pipeline without triggering actual background threads or blocking tasks.
+* The method signature of the 'completedFuture' method is:
+  public static <U> CompletableFuture<U> completedFuture(U value);
+Output:
+Value: Hello
