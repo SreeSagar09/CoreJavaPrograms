@@ -55,3 +55,26 @@ Notes:
   public static <U> CompletableFuture<U> completedFuture(U value);
 Output:
 Value: Hello
+----------------------------------------------------------------------
+
+4. A Program to show use of 'get' all overloaded methods:
+Program: CompletableFutureClassProgram4.java
+Notes:
+* The method signature of the 'supplyAsync' methods are:
+  public T get() throws InterruptedException, ExecutionException;
+  public T get(long timeout, TimeUnit unit) throws InterruptedException, ExecutionException, TimeoutException
+Output:
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 0
+Thread Name: ForkJoinPool.commonPool-worker-2, Index: 0
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 1
+Thread Name: ForkJoinPool.commonPool-worker-2, Index: 1
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 2
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 3
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 4
+Thread Name: ForkJoinPool.commonPool-worker-1, Index: 5
+Thread Name: ForkJoinPool.commonPool-worker-2, Index: 2
+Thread Name: ForkJoinPool.commonPool-worker-2, Index: 3
+Thread Name: ForkJoinPool.commonPool-worker-2, Index: 4
+Thread Name: ForkJoinPool.commonPool-worker-2, Index: 5
+Value: 15
+Value: 15
