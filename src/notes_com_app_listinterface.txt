@@ -1,0 +1,46 @@
+1. A Program to show how to use 'add' overloaded methods:
+Program: ListInterfaceProgram1.java
+Notes:
+* The 'add' overloaded methods are used to add or insert element to the list.
+* The 'add(E e)' method is used to add element to the end of the list.
+* The method signature is:
+  boolean add(E e);
+* The 'add(int index, E element)' method is used to insert element at the specific position in the list, and shift the element at that position and subsequest elements to the right. 
+* The method signature is:
+  void add(int index, E element);
+* The 'index' should be greater than or equals to 0 and less than or equals to size of the list. Otherwise it will throw 'java.lang.IndexOutOfBoundsException'.
+Output:
+[A, B, BB, C, D, E]
+----------------------------------------------------------------
+
+2. A Program to show how to use 'addAll' overloaded methods:
+Program: ListInterfaceProgram2.java
+Notes:
+* The 'addAll' overloaded methods are used to add or insert all the elements in the specified collection to the list.
+* The 'addAll(Collection c)' method is used to add all the elements in the specified collection to the end of the list.
+* The method signature is:
+  boolean addAll(Collection<? extends E> c);
+* The 'add(int index, E element)' method is used to insert all the elements in the specified collection at the specific position in the list, and shift the element at that position and subsequest elements to the right. 
+* The method signature is:
+  boolean addAll(int index, Collection<? extends E> c);
+* The 'index' should be greater than or equals to 0 and less than or equals to size of the list. Otherwise it will throw 'java.lang.IndexOutOfBoundsException'.
+Output:
+[A, B, AA, BB, C, D]
+----------------------------------------------------------------
+3. A Program to show how to work with 'addFirst', 'addLast' methods:
+Program: ListInterfaceProgram3.java
+Notes:
+* The 'addFirst' method add an element as the first element of the collection.
+* The method signature is:
+  default void addFirst(E e);
+* The 'addLast' method add an element as the last element of the collection.
+* The method signature is:
+  default void addLast(E e)
+* This two methods are belongs to the 'java.util.SequencedCollection' interface, introduced in Java-21 version.
+Output:
+-------- Original list elements ---------
+[A, B]
+-------- After using addFirst method --------
+[AA, A, B]
+-------- After using addLast method --------
+[AA, A, B, C]
