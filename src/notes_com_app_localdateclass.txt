@@ -1,0 +1,38 @@
+1. A Program to show how to work with 'now' overloaded methods:
+Program: LocalDateClassProgram1.java
+Notes:
+* The 'now' overloaded methods are static methods, this methods will return LocalDate class objects.
+* Method signature of 'now' overloaded methods:
+  public static LocalDate now();
+  public static LocalDate now(ZoneId zone);
+  public static LocalDate now(Clock clock);
+Output:
+LocalDate with system clock: 2026-09-28
+LocalDate with zone id: 2026-09-29
+LocalDate with clock: 2026-09-28
+-----------------------------------------------------------------------
+2. A Program to show how to work with 'of' overloaded methods:
+Program: LocalDateClassProgram2.java
+Notes:
+* The 'of' method is used to instantiate the LocalDate by year, month and day of the month.
+* Method signature of 'of' overloaded methods:
+  public static LocalDate of(int year, Month month, int dayOfMonth);
+  public static LocalDate of(int year, int month, int dayOfMonth):
+* This method will throw 'java.time.DateTimeException' when the value of any field is out of range,
+or if the day of month is invalid for the month of year.
+Output:
+2026-09-30
+2027-01-02
+2027-01-02
+-----------------------------------------------------------------------
+3. A Program to show how to work with 'ofYearDay', 'ofInstant' and 'ofEpochDay' methods:
+Program: LocalDateClassProgram3.java
+Notes:
+
+Output:
+2026-01-01
+2026-12-26
+2026-09-29
+1970-01-01
+1969-12-31
+2026-02-16
