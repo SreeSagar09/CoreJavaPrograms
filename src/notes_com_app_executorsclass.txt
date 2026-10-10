@@ -2,10 +2,9 @@
 Program: ExecutorsClassProgram1.java
 Notes:
 * The 'newFixedThreadPool' method is used to create a thread pool with given fixed number of reusable threads.
-* To create thread pool this method internally using ThreadPoolExecutor class.
+* To create thread pool this method internally using ThreadPoolExecutor class constructor with LinkedBlockingQueue to store the additional submitted tasks.
 * At any point all threads are active in processing tasks, if any additional tasks are submitted, those tasks will wait in queue until a thread is available.
 * If any thread is terminates due to a failure during execution before to the shutdown, a new thread will take its place if needed to execute subsequent tasks.
-* It is internally uses LinkedBlockingQueue to store the additional submitted tasks, it is sharable to all the threads in the thread pool.
 * The threads in pool will be exists until it is explicitly shutdown.
 * Method signature 'newFixedThreadPool' method:
   public static ExecutorService newFixedThreadPool(int nThreads);
@@ -86,7 +85,7 @@ Thread Name: pool-1-thread-1, Index: 5
 ------------------------------------------------------------
 
 6. A Program to show how to work with 'newSingleThreadExecutor' method of Executors class:
-Program: ExecutorsClassProgram5.java
+Program: ExecutorsClassProgram6.java
 Notes:
 * The 'newSingleThreadExecutor' method is used to create single thread with the given ThreadFactory object.
 * This method is equals to the 'newFixedThreadPool(1, threadFactory)' method.
@@ -99,3 +98,45 @@ Thread Name: Custom Thread Factory-0, Index: 2
 Thread Name: Custom Thread Factory-0, Index: 3
 Thread Name: Custom Thread Factory-0, Index: 4
 Thread Name: Custom Thread Factory-0, Index: 5
+------------------------------------------------------------
+
+7. A Program to show how to work with 'newCachedThreadPool' method of Executors class:
+Program: ExecutorsClassProgram7.java
+Notes:
+* The 'newCachedThreadPool' method is used to create thread pool with required threads.
+* This will reuse previously constructed thread when they are available, if no threads are available it will create required threads and added to the thread pool.
+* Threads that have not been used for sixty seconds are terminated and removed from the cache.
+* Method signature 'newCachedThreadPool' method:
+  public static ExecutorService newCachedThreadPool();
+Output:
+Thread Name: pool-1-thread-1, Index: 0
+Thread Name: pool-1-thread-2, Index: 1
+Thread Name: pool-1-thread-3, Index: 2
+Thread Name: pool-1-thread-4, Index: 3
+Thread Name: pool-1-thread-6, Index: 5
+Thread Name: pool-1-thread-7, Index: 6
+Thread Name: pool-1-thread-9, Index: 8
+Thread Name: pool-1-thread-8, Index: 7
+Thread Name: pool-1-thread-10, Index: 9
+Thread Name: pool-1-thread-11, Index: 10
+Thread Name: pool-1-thread-5, Index: 4
+------------------------------------------------------------
+
+8. A Program to show how to work with 'newCachedThreadPool' method of Executors class:
+Program: ExecutorsClassProgram7.java
+Notes:
+* The 'newCachedThreadPool' method is used to create thread pool with required threads and with given ThreadFactory class object.
+* Method signature 'newCachedThreadPool' method:
+  public static ExecutorService newCachedThreadPool(ThreadFactory threadFactory);
+Output:
+Thread Name: Thread[#24,Custom Thread Factory-1,5,main], Index: 1
+Thread Name: Thread[#25,Custom Thread Factory-2,5,main], Index: 2
+Thread Name: Thread[#23,Custom Thread Factory-0,5,main], Index: 0
+Thread Name: Thread[#27,Custom Thread Factory-4,5,main], Index: 4
+Thread Name: Thread[#26,Custom Thread Factory-3,5,main], Index: 3
+Thread Name: Thread[#28,Custom Thread Factory-5,5,main], Index: 5
+Thread Name: Thread[#29,Custom Thread Factory-6,5,main], Index: 6
+Thread Name: Thread[#30,Custom Thread Factory-7,5,main], Index: 7
+Thread Name: Thread[#31,Custom Thread Factory-8,5,main], Index: 8
+Thread Name: Thread[#33,Custom Thread Factory-10,5,main], Index: 10
+Thread Name: Thread[#32,Custom Thread Factory-9,5,main], Index: 9
