@@ -5,20 +5,15 @@ import java.util.concurrent.Executors;
 
 public class ExecutorsClassProgram1 {
 	public static void main(String[] args) {
+		/* It will create a thread pool with 10 number of threads */
 		ExecutorService executorService = Executors.newFixedThreadPool(10);
 		
-		Runnable runnable = new Runnable() {
-			@Override
-			public void run() {
-				for(int i=0; i<=5; i++) {
-					System.out.println("Thread Name: "+Thread.currentThread().getName()+", Index: "+i);
-				}
-			}
-		};
-		
-		executorService.execute(runnable);
-		executorService.execute(runnable);
-		executorService.execute(runnable);
+		for(int i=0; i<=5; i++) {
+			int index = i;
+			executorService.execute(()->{
+				System.out.println("Thread Name: "+Thread.currentThread().getName()+", Index: "+index);
+			});
+		}
 		
 		executorService.shutdown();
 	}

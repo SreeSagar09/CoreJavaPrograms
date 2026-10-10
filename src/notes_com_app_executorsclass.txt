@@ -1,26 +1,83 @@
-1. A Program to show the use of newFixedThreadPool method of Executors class:
+1. A Program to show how to work with 'newFixedThreadPool' method of Executors class:
 Program: ExecutorsClassProgram1.java
 Notes:
-* The 'newFixedThreadPool' method is used to create a thread pool with fixed number of reusable threads.
+* The 'newFixedThreadPool' method is used to create a thread pool with given fixed number of reusable threads.
+* To create thread pool this method internally using ThreadPoolExecutor class.
 * At any point all threads are active in processing tasks, if any additional tasks are submitted, those tasks will wait in queue until a thread is available.
 * If any thread is terminates due to a failure during execution before to the shutdown, a new thread will take its place if needed to execute subsequent tasks.
+* It is internally uses LinkedBlockingQueue to store the additional submitted tasks, it is sharable to all the threads in the thread pool.
 * The threads in pool will be exists until it is explicitly shutdown.
 * Method signature 'newFixedThreadPool' method:
-  public static ExecutorService newFixedThreadPool(int nThreads)
+  public static ExecutorService newFixedThreadPool(int nThreads);
 Output:
-Thread Name: pool-1-thread-2, Index: 0
-Thread Name: pool-1-thread-3, Index: 0
 Thread Name: pool-1-thread-1, Index: 0
-Thread Name: pool-1-thread-3, Index: 1
 Thread Name: pool-1-thread-2, Index: 1
-Thread Name: pool-1-thread-2, Index: 2
 Thread Name: pool-1-thread-3, Index: 2
-Thread Name: pool-1-thread-3, Index: 3
-Thread Name: pool-1-thread-3, Index: 4
-Thread Name: pool-1-thread-3, Index: 5
-Thread Name: pool-1-thread-2, Index: 3
-Thread Name: pool-1-thread-2, Index: 4
-Thread Name: pool-1-thread-2, Index: 5
+Thread Name: pool-1-thread-6, Index: 5
+Thread Name: pool-1-thread-5, Index: 4
+Thread Name: pool-1-thread-4, Index: 3
+------------------------------------------------------------
+
+2. A Program to show how to work with 'newWorkStealingPool' method of Executors class:
+Program: ExecutorsClassProgram2.java
+Notes:
+* The 'newWorkStealingPool' method is used to create a thread pool with given parallelism supports work stealing threads.
+* To create thread pool this method internally using ForkJoinPool class.
+* Every worker thread internally maintain own task queue, when a worker thread is idle, it can steal tasks from other worker thread.
+* All the worker thread are deamon threads.
+* Method signature 'newWorkStealingPool' method:
+  public static ExecutorService newWorkStealingPool(int parallelism);
+Output:
+Thread Name: ForkJoinPool-1-worker-1, Index: 0
+Thread Name: ForkJoinPool-1-worker-2, Index: 1
+Thread Name: ForkJoinPool-1-worker-3, Index: 2
+Thread Name: ForkJoinPool-1-worker-3, Index: 5
+Thread Name: ForkJoinPool-1-worker-2, Index: 3
+Thread Name: ForkJoinPool-1-worker-1, Index: 4
+------------------------------------------------------------
+
+3. A Program to show how to work with 'newWorkStealingPool' method of Executors class:
+Program: ExecutorsClassProgram3.java
+Notes:
+* The 'newWorkStealingPool' method is used to create a thread pool with the available processors supports work stealing threads.
+* Method signature 'newWorkStealingPool' method:
+  public static ExecutorService newWorkStealingPool();
+Output:
+Thread Name: ForkJoinPool-1-worker-1, Index: 0
+Thread Name: ForkJoinPool-1-worker-3, Index: 2
+Thread Name: ForkJoinPool-1-worker-2, Index: 1
+Thread Name: ForkJoinPool-1-worker-3, Index: 4
+Thread Name: ForkJoinPool-1-worker-2, Index: 5
+Thread Name: ForkJoinPool-1-worker-1, Index: 3
+Available Processors: 4
+------------------------------------------------------------
+
+4. A Program to show how to work with 'newWorkStealingPool' method of Executors class:
+Program: ExecutorsClassProgram4.java
+Notes:
+* The 'newFixedThreadPool' method is used to create a thread pool with given fixed number of reusable threads and with given ThreadFactory object.
+* Method signature 'newFixedThreadPool' method:
+   public static ExecutorService newFixedThreadPool(int nThreads, ThreadFactory threadFactory);
+Output:
+Thread Name: Custom Thread Factory-1, Index: 1
+Thread Name: Custom Thread Factory-0, Index: 0
+Thread Name: Custom Thread Factory-0, Index: 5
+Thread Name: Custom Thread Factory-2, Index: 2
+Thread Name: Custom Thread Factory-4, Index: 4
+Thread Name: Custom Thread Factory-3, Index: 3
+------------------------------------------------------------
+
+5. A Program to show how to work with 'newSingleThreadExecutor' method of Executors class:
+Program: ExecutorsClassProgram5.java
+Notes:
+* The 'newSingleThreadExecutor' method is used to create single thread.
+* If the single thread terminates due to a failure during execution prior to shutdown, a new thread will take its place if needed to execute subsequent tasks.
+* Tasks are executed in sequentially.
+* This method is equals to the 'newFixedThreadPool(1)' method.
+* Method signature 'newSingleThreadExecutor' method:
+  public static ExecutorService newSingleThreadExecutor();
+Output:
+Thread Name: pool-1-thread-1, Index: 0
 Thread Name: pool-1-thread-1, Index: 1
 Thread Name: pool-1-thread-1, Index: 2
 Thread Name: pool-1-thread-1, Index: 3
@@ -28,13 +85,17 @@ Thread Name: pool-1-thread-1, Index: 4
 Thread Name: pool-1-thread-1, Index: 5
 ------------------------------------------------------------
 
-2. A Program to show the use of newWorkStealingPool method of Executors class:
-Program: ExecutorsClassProgram2.java
+6. A Program to show how to work with 'newSingleThreadExecutor' method of Executors class:
+Program: ExecutorsClassProgram5.java
 Notes:
-* The 'newFixedThreadPool' method is used to create a thread pool with fixed number of reusable threads.
-* At any point all threads are active in processing tasks, if any additional tasks are submitted, those tasks will wait in queue until a thread is available.
-* If any thread is terminates due to a failure during execution before to the shutdown, a new thread will take its place if needed to execute subsequent tasks.
-* The threads in pool will be exists until it is explicitly shutdown.
-* Method signature 'newFixedThreadPool' method:
-  public static ExecutorService newFixedThreadPool(int nThreads)
+* The 'newSingleThreadExecutor' method is used to create single thread with the given ThreadFactory object.
+* This method is equals to the 'newFixedThreadPool(1, threadFactory)' method.
+* Method signature 'newSingleThreadExecutor' method:
+  public static ExecutorService newSingleThreadExecutor(ThreadFactory threadFactory);
 Output:
+Thread Name: Custom Thread Factory-0, Index: 0
+Thread Name: Custom Thread Factory-0, Index: 1
+Thread Name: Custom Thread Factory-0, Index: 2
+Thread Name: Custom Thread Factory-0, Index: 3
+Thread Name: Custom Thread Factory-0, Index: 4
+Thread Name: Custom Thread Factory-0, Index: 5
